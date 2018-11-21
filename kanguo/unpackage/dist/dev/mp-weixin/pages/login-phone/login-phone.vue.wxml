@@ -1,0 +1,21 @@
+<template name="38027cc8">
+  <view class="_view data-v-20b071f6 container">
+    <view class="_view data-v-20b071f6 top-img">
+      <image class="_image data-v-20b071f6" src="../../static/images/login_PhoneBG@3x.png" mode="widthFix"></image>
+    </view>
+    <view class="_view data-v-20b071f6 login-input phone-num">
+      <image src="../../static/images/login_signPhone@3x.png" mode="aspectFit" class="_image data-v-20b071f6"></image>
+      <input type="text" value="" placeholder="请输入手机号码" class="_input data-v-20b071f6" />
+    </view>
+    <view class="_view data-v-20b071f6 login-input phone-password">
+      <image src="../../static/images/login_signLock@3x.png" mode="aspectFit" class="_image data-v-20b071f6"></image>
+      <input type="password" value="" placeholder="请输入登录密码" class="_input data-v-20b071f6" />
+    </view>
+    <view class="_view data-v-20b071f6 other-login-way">
+      <text class="_text data-v-20b071f6">其他方式登录</text>
+      <view class="_view data-v-20b071f6 other-way-list">
+        <image bindtap="handleProxy" class="_image data-v-20b071f6 other-login" src="../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'NFT-0'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+  </view>
+</template>

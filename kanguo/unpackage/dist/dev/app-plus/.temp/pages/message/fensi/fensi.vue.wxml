@@ -1,0 +1,18 @@
+<template name="4b1bde69">
+  <view class="_view data-v-f7a66cb8">
+    <view class="_view data-v-f7a66cb8 msg-list">
+      <view class="_view data-v-f7a66cb8 msg-item" wx:key="index" key="{{index}}" wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-index="index" wx:for-item="i">
+        <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-f7a66cb8"></image>
+        <view class="_view data-v-f7a66cb8 msg-detail">
+          <view class="_view data-v-f7a66cb8 msg-title">
+            <text class="_text data-v-f7a66cb8">我是谁</text>
+            <text class="_text data-v-f7a66cb8 time">13:39</text>
+          </view>
+          <view class="_view data-v-f7a66cb8 msg-text"> 关注了你
+            <view bindtap="handleProxy" data-eventid="{{'WY1-0-'+index}}" data-comkey="{{$k}}" class="_view data-v-f7a66cb8 {{[guanzhuOrNot ? 'not-guanzhu' : 'guanzhu']}}">{{guanzhuMsg}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

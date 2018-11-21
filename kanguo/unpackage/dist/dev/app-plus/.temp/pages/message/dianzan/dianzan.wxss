@@ -1,0 +1,64 @@
+@import "../../../common/vendor.wxss";
+
+.msg-item {
+  padding: 30rpx 40rpx;
+  border-top: 1px solid #c9c9c9;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.msg-item > image {
+  width: 140rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+.msg-detail {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  display: block;
+}
+.msg-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #363636;
+}
+.msg-title .time {
+  font-size: 30rpx;
+  font-weight: normal;
+  color: #c9c9c9;
+}
+.msg-text {
+  display: block;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  width: 100%;
+}
+.no-zan {
+  padding-top: 250rpx;
+  text-align: center;
+}
+.no-zan-text1 {
+  font-size: 50rpx;
+  color: #363636;
+}
+.no-zan-text2 {
+  font-size: 36rpx;
+  color: #363636;
+}

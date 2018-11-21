@@ -1,0 +1,1 @@
+<import src="/pages/message/pinglun/pinglun.vue.wxml" /><template is="2825bdf6" data="{{ ...$root['0'], $root }}"/>

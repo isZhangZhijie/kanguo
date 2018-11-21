@@ -1,0 +1,45 @@
+@import "../../../common/vendor.wxss";
+
+.msg-list {
+  padding: 30rpx 40rpx;
+}
+.msg-item {
+  margin-bottom: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.msg-item > image {
+  width: 140rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.msg-text {
+  position: relative;
+  padding: 20rpx 30rpx;
+  border-radius: 16rpx;
+  background: #fff;
+}
+.msg-text:before {
+  content: '';
+  position: absolute;
+  top: 20rpx;
+  right: 100%;
+  width: 0;
+  height: 0;
+  border-top: 15rpx solid transparent;
+  border-right: 12rpx solid #fff;
+  border-bottom: 15rpx solid transparent;
+  border-left: 12rpx solid transparent;
+}
+.time {
+  text-align: center;
+  font-family: arial;
+  color: #c9c9c9;
+}

@@ -1,0 +1,1 @@
+<import src="/pages/login/forget/captcha/captcha.vue.wxml" /><template is="aaddbcc8" data="{{ ...$root['0'], $root }}"/>

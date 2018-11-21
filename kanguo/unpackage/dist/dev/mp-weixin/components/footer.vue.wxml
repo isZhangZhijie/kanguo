@@ -1,0 +1,15 @@
+<template name="cca5c36e">
+  <view class="_view data-v-10981d20 footer">
+    <view class="_view data-v-10981d20 jingxuan">
+      <image src="/static/images/nav_jingxuan0@3x.png" mode="widthFix" class="_image data-v-10981d20"></image>精选 </view>
+    <view class="_view data-v-10981d20 faxian">
+      <image src="/static/images/nav_faxian0@3x.png" mode="widthFix" class="_image data-v-10981d20"></image>发现 </view>
+    <view class="_view data-v-10981d20 fabu">
+      <image src="/static/images/nav_button_fabu@3x.png" mode="widthFix" class="_image data-v-10981d20"></image>
+    </view>
+    <view class="_view data-v-10981d20 massage">
+      <image src="/static/images/nav_massage0@3x.png" mode="widthFix" class="_image data-v-10981d20"></image>消息 </view>
+    <view class="_view data-v-10981d20 mine">
+      <image src="/static/images/nav_mine0@3x.png" mode="widthFix" class="_image data-v-10981d20"></image>我的 </view>
+  </view>
+</template>

@@ -1,0 +1,29 @@
+<template name="4b1bde69">
+  <view class="_view data-v-f7a66cb8">
+    <view class="_view data-v-f7a66cb8 uni-list">
+      <view class="_view data-v-f7a66cb8 uni-list-cell" hover-class="uni-list-cell-hover">
+        <view class="_view data-v-f7a66cb8 uni-media-list">
+          <image class="_image data-v-f7a66cb8 uni-media-list-logo" src="../../../static/images/common__button_emoj@3x.png"></image>
+          <view class="_view data-v-f7a66cb8 uni-media-list-body">
+            <view class="_view data-v-f7a66cb8 uni-media-list-text-top">123</view>
+            <view class="_view data-v-f7a66cb8 uni-media-list-text-bottom uni-ellipsis">123</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="_view data-v-f7a66cb8 fensi-list">
+      <view class="_view data-v-f7a66cb8 fensi-item">
+        <image src="../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-f7a66cb8"></image>
+        <view class="_view data-v-f7a66cb8 fensi-detail">
+          <view class="_view data-v-f7a66cb8 fensi-title">
+            <text class="_text data-v-f7a66cb8">系统通知</text>
+            <text class="_text data-v-f7a66cb8 time">13:39</text>
+          </view>
+          <view class="_view data-v-f7a66cb8 fensi-text"> 关注了你
+            <view class="_view data-v-f7a66cb8 guanzhu"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

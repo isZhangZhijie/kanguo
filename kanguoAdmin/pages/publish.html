@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>发布视频</title>
+
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="../src/plugin/bootstrap-3.3.7/css/bootstrap.min.css">
+
+  <script src="../src/plugin/jquery-3.3.1.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="../src/plugin/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="../src/css/global.css">
+</head>
+<body>
+  <!-- 公共头部 -->
+  <div class="header">
+    <div class="xtb-container">
+      <span class="logo">
+        <img src="../src/images/logo.png" alt="">
+      </span>
+      <div class="login-box am-topbar-right">
+        <div class="login-down">
+          <span class="login-down-menu">
+            <span class="img-box">
+              <img src="../src/images/enterSuccess_last.png">
+            </span>
+            <i></i>
+          </span>
+          <ul class="login-dropdown-menu">
+            <li>
+              <a href=""><i></i>账号设置</a>
+            </li>
+            <li>
+              <a href=""><i></i>账号权限</a>
+            </li>
+            <li>
+              <a href=""><i></i>退出登录</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="go-msg">
+          <img src="../src/images/massege.png" alt="">
+          <span class="msg-num">12</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="xtb-container clearfix">
+    <!-- 左侧选项卡 -->
+    <ul class="sidebar">
+      <li><a href="">个人主页</a></li>
+      <li class="active"><a href="">发布视频</a></li>
+      <li><a href="">视频管理</a></li>
+      <li><a href="">评论管理</a></li>
+      <li><a href="">粉丝管理</a></li>
+      <li><a href="">数据分析</a></li>
+      <li><a href="">资料修改</a></li>
+    </ul>
+    <div class="right-content">
+      <div class="panel panel-default widget">
+        <div class="panel-body">
+          <div class="widget-header">
+            <h3>发布视频</h3>
+          </div>
+          <form action="" id="submit" class="form-horizontal">
+
+            <div class="video-upload-box" style="display: block;">
+              <img src="../src/images/enterVideo.png" alt="">
+              <div style="margin:60px 0 50px">
+                <a href="javascript:;" id="videoUploadBtn" class="btn-yellow">上传视频</a>
+              </div>
+              <input type="file" id="videoUpload" style="display: none;">
+              <p>提示：建议上传视频的比例为16:9，分辨率为1080p(1920x1080)及以上的视频，有利于提高播放量哦！</p>
+            </div>
+
+            <div class="video-publish-box" style="display: none;">
+              <div class="video-detail clearfix">
+                <div class="col-xs-3 video-box">
+                  <video src="" style="width:160px;height:90px;"></video>
+                </div>
+                <div class="col-xs-4 success">
+                  <span><img src="../src/images/enterSuccess.png" alt="">视频上传成功</span>
+                  <p>片段.mp4</p>
+                </div>
+                <div class="col-xs-3 pull-right" style="width: 220px;padding-top: 30px;">
+                  <a href="" class="error">上传错误?</a>
+                  <a href="" class="reload">重新上传</a>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">标题</label>
+                <div class="col-sm-10">
+                  <input type="text" maxlength="20" class="form-control word-limit" id="" placeholder="">
+                  <span class="word-count"><span>0</span>/20</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">剧名</label>
+                <div class="col-sm-10">
+                  <input type="text" maxlength="20" class="form-control word-limit" id="" placeholder="">
+                  <span class="word-count"><span>0</span>/20</span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">设置封面</label>
+                <div class="col-sm-10">
+                  <a href="javascript:;" class="upload-img" id="imgUploadBtn">
+                    <img src="../src/images/getPic.png" alt="" class="add">
+                    点击添加
+                  </a>
+                  <input type="file" class="form-control" id="imgUpload" style="display: none">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">关键字标签</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="" placeholder="按空格或回车，添加与视频相关的信息标签，能有利于提高播放量">
+                  <ul class="tag-list clearfix">
+                    <li>斗破苍穹<img src="../src/images/label_del.png"></img></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="form-group" style="text-align: center;">
+                <button type="submit" class="btn-yellow" id="publish" style="margin-right: 20px;" data-toggle="modal" data-target="#success">发布</button>
+                <button class="btn-white">取消</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+        <div class="modal-dialog" style="margin-top: 300px;" role="document">
+          <div class="modal-content">
+            <div class="modal-body" style="text-align: center;padding: 50px 15px;">
+              <p class="title" style="font-size: 14px;color: #707070;margin-bottom: 30px;">作品：母亲为救消炎，竟孤身一人前去龙潭虎穴，竟被山贼</p>
+              <p style="font-size: 32px;color: #363636;margin-bottom: 58px;"><img src="../src/images/enterSuccess_last.png" alt=""> 视频上传成功</p>
+              <p>
+                <a href="" style="margin-right: 20px;" class="btn-yellow">继续发布</a>
+                <a href="" class="btn-white">查看已发布</a>
+              </p>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    </div>
+  </div>
+
+  <script>
+    // 上传视频
+    $("#videoUpload").change(function(event){
+        var files = event.target.files[0];
+        var isVideo = files.type.split('/')[0]
+        // console.log(event,files,window.URL.createObjectURL(files))
+        if(isVideo == 'video') {
+          $('.video-upload-box').hide()
+          $('.video-publish-box').show()
+          $('.video-box video').attr('src', window.URL.createObjectURL(files))
+        } else {
+          alert('请上传视频文件')
+        }
+    });
+    $('#videoUploadBtn').click(function(){
+      $('#videoUpload').click();
+    })
+
+    // 上传图片
+    $("#imgUpload").change(function(event){
+        var files = event.target.files[0];
+        var isImg = files.type.split('/')[0]
+        if(isImg == "image") {
+          $('#imgUploadBtn').html('<img src="' + window.URL.createObjectURL(files) + '" class="selected-img">')
+        } else {
+          alert('请上传图片文件')
+        }
+    });
+    $('#imgUploadBtn').click(function(){
+      $('#imgUpload').click();
+    })
+
+    // 字数限制
+    $('.word-limit').on('input', function(e) {
+      var _this = $(this)
+      var len = _this.val().length
+      _this.siblings('.word-count').find('span').text(len)
+    })
+
+    // 提交
+    $('#submit').submit(function(e) {
+      e.preventDefault()
+    });
+  </script>
+</body>
+</html>
