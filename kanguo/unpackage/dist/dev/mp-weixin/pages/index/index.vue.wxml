@@ -17,8 +17,8 @@
       </view>
     </view>
     <view class="_view data-v-49887f46 video-list">
-      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'sIi-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'4LT-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
     </view>
-    <template data="{{...$root['0'], ...$root[$kk+'GeW-1'],$root}}" is="cca5c36e"></template>
+    <template data="{{...$root['0'], ...$root[$kk+'AMd-1'],$root}}" is="cca5c36e"></template>
   </view>
 </template>

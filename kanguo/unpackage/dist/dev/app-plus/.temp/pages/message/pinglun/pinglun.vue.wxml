@@ -2,16 +2,13 @@
   <view class="_view data-v-69925600">
     <view class="_view data-v-69925600 msg-list">
       <view class="_view data-v-69925600 msg-item" wx:key="index" key="{{index}}" wx:for="{{[1,2,3,4,5,6,7,8,9]}}" wx:for-index="index" wx:for-item="i">
-        <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-69925600"></image>
-        <view class="_view data-v-69925600 msg-detail">
-          <view class="_view data-v-69925600 msg-title">
-            <text class="_text data-v-69925600">我是谁</text>
-            <text class="_text data-v-69925600 time">13:39</text>
-          </view>
-          <view class="_view data-v-69925600 msg-text"> 关注了你
-            <view bindtap="handleProxy" data-eventid="{{'Z43-0-'+index}}" data-comkey="{{$k}}" class="_view data-v-69925600 {{[guanzhuOrNot ? 'not-guanzhu' : 'guanzhu']}}">{{guanzhuMsg}}</view>
-          </view>
+        <view class="_view data-v-69925600 title-row">
+          <text class="_text data-v-69925600 title">勇闯AK火力网，凌风一枪生擒毒枭</text>
+          <image src="../../../static/images/timg.jpg" mode="widthFix" class="_image data-v-69925600"></image>
         </view>
+        <view class="_view data-v-69925600 pinglun-row">
+          <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-69925600"></image> 为智霖男神疯狂打call！！！ </view>
+        <view class="_view data-v-69925600 new-pinglun"> 还有2条新评论> </view>
       </view>
     </view>
   </view>

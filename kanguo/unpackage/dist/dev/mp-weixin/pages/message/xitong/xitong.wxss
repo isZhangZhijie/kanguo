@@ -1,9 +1,9 @@
 @import "../../../common/vendor.wxss";
 
-.msg-list {
+.msg-list1 {
   padding: 30rpx 40rpx;
 }
-.msg-item {
+.msg-item1 {
   margin-bottom: 40rpx;
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,18 +15,18 @@
   -webkit-justify-content: space-between;
   justify-content: space-between;
 }
-.msg-item > image {
+.msg-item1 > image {
   width: 140rpx;
   border-radius: 50%;
   margin-right: 30rpx;
 }
-.msg-text {
+.msg-text1 {
   position: relative;
   padding: 20rpx 30rpx;
   border-radius: 16rpx;
   background: #fff;
 }
-.msg-text:before {
+.msg-text1:before {
   content: '';
   position: absolute;
   top: 20rpx;

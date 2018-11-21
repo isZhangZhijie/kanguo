@@ -18,6 +18,6 @@
       <view class="_view data-v-7e537180 img-item xtb-3dots" wx:key="index" key="{{index}}" wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:for-index="index" wx:for-item="imgItem">
         <image src="../../static/images/juzhao.png" mode="widthFix" class="_image data-v-7e537180"></image> 极速青春 </view>
     </view>
-    <template data="{{...$root['0'], ...$root[$kk+'yGq-0'],$root}}" is="cca5c36e"></template>
+    <template data="{{...$root['0'], ...$root[$kk+'eWQ-0'],$root}}" is="cca5c36e"></template>
   </view>
 </template>

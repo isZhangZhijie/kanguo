@@ -1,3 +1,20 @@
 <template name="9334256e">
-  <view class="_view data-v-340b2244"></view>
+  <view class="_view data-v-340b2244">
+    <view class="_view data-v-340b2244 msg-list" wx:if="{{dianzanList.length>0}}">
+      <view class="_view data-v-340b2244 msg-item" wx:key="index" key="{{index}}" wx:for="{{dianzanList}}" wx:for-index="index" wx:for-item="i">
+        <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-340b2244"></image>
+        <view class="_view data-v-340b2244 msg-detail">
+          <view class="_view data-v-340b2244 msg-title">
+            <text class="_text data-v-340b2244">我是谁</text>
+            <text class="_text data-v-340b2244 time">13:39</text>
+          </view>
+          <view class="_view data-v-340b2244 msg-text"> 用户赞了你的评论 #我智霖男神贼给力 </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="_view data-v-340b2244 no-zan">
+      <view class="_view data-v-340b2244 no-zan-text1">还没有人赞过你</view>
+      <view class="_view data-v-340b2244 no-zan-text2">发个短片来获赞吧！</view>
+    </view>
+  </view>
 </template>

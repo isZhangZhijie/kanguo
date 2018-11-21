@@ -4,7 +4,7 @@
     <view class="_view data-v-43411a70 top-bar">
       <view class="_view data-v-43411a70 top-text">消息</view>
       <view class="_view data-v-43411a70 msg-type">
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'mNL-0'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'frG-0'}}" data-comkey="{{$k}}">
           <image src="../../static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 粉丝 </view>
         <view class="_view data-v-43411a70 type-item">
           <image src="../../static/images/massage_button_dianzan@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 点赞
@@ -19,7 +19,7 @@
       </view>
     </view>
     <view class="_view data-v-43411a70 msg-list">
-      <view class="_view data-v-43411a70 msg-item" bindtap="handleProxy" data-eventid="{{'6b2-1'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-43411a70 msg-item" bindtap="handleProxy" data-eventid="{{'a6u-1'}}" data-comkey="{{$k}}">
         <image src="../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-43411a70"></image>
         <view class="_view data-v-43411a70 msg-detail">
           <view class="_view data-v-43411a70 msg-title">
@@ -30,6 +30,6 @@
         </view>
       </view>
     </view>
-    <template data="{{...$root['0'], ...$root[$kk+'1JX-0'],$root}}" is="cca5c36e"></template>
+    <template data="{{...$root['0'], ...$root[$kk+'iQM-0'],$root}}" is="cca5c36e"></template>
   </view>
 </template>

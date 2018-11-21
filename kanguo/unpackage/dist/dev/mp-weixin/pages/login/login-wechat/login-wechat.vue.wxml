@@ -7,7 +7,7 @@
     <view class="_view data-v-205fb03a other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
       <text class="_text data-v-205fb03a">其他方式登录</text>
       <view class="_view data-v-205fb03a other-way-list">
-        <image bindtap="handleProxy" class="_image data-v-205fb03a other-login" src="../../../static/images/login_button_PhoneEnter@3x.png" data-eventid="{{'GLG-0'}}" data-comkey="{{$k}}"></image>
+        <image bindtap="handleProxy" class="_image data-v-205fb03a other-login" src="../../../static/images/login_button_PhoneEnter@3x.png" data-eventid="{{'pnQ-0'}}" data-comkey="{{$k}}"></image>
       </view>
     </view>
   </view>
