@@ -48,7 +48,7 @@
 				退出登录
 			</view>
 		</view>
-		<footfoot></footfoot>
+		<!-- <footfoot></footfoot> -->
 	</view>
 </template>
 
@@ -147,7 +147,7 @@
 		text-align: center;
 	}
 	.quit-row {
-		padding-bottom: 220upx;
-		padding-top: 100upx;
+		/* padding-bottom: 220upx; */
+		/* padding-top: 100upx; */
 	}
 </style>

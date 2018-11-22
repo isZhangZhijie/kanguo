@@ -26,7 +26,7 @@
 			</view>
 		</view>
 
-		<footfoot></footfoot>
+		<!-- <footfoot></footfoot> -->
 	</view>
 </template>
 
@@ -117,7 +117,7 @@
 		color: #ecbe07;
 	}
 	.img-list {
-		padding: 500upx 0 130upx 40upx;
+		padding: 500upx 0 30upx 40upx;
 		width: 100%;
 		overflow: hidden;
 	}

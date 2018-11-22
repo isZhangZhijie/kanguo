@@ -81,7 +81,7 @@
   color: #ecbe07;
 }
 .img-list {
-  padding: 500rpx 0 130rpx 40rpx;
+  padding: 500rpx 0 30rpx 40rpx;
   width: 100%;
   overflow: hidden;
 }

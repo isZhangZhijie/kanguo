@@ -5,7 +5,7 @@
 			<image class="search-btn" src="../../static/images/index__button_find@3x.png" mode="widthFix"></image>
 			<view class="sel-bar">
 				<scroll-view scroll-x="true" class="scroll-view-box">
-					<view id="" class="scroll-view-item" style="width: 30upx;color:#FFF;">1</view>
+					<view id="" class="scroll-view-item" style="width: 100upx;color:#FFF;">1</view>
 					<view id="" class="scroll-view-item active">近期热播</view>
 					<view id="" class="scroll-view-item">人气榜</view>
 					<view id="" class="scroll-view-item">获赞榜</view>
@@ -21,7 +21,7 @@
 		</view>
 		
 		
-		<footfoot></footfoot>
+		<!-- <footfoot></footfoot> -->
     </view>
 </template>
 <script>
@@ -40,14 +40,14 @@
 
 <style>
 	.container {
-		padding-bottom: 150upx;
+		/* padding-bottom: 150upx; */
 		background: #e6e6e6;
 	}
 	.top-bar {
 		padding-top: 40upx;
-		position: fixed;
-		top: 0;
-		left: 0;
+		position: relative;
+		/* top: 0; */
+		/* left: 0; */
 		width: 100%;
 		background: #fff;
 		box-shadow: 0 10upx 10upx rgba(0,0,0,.2);
@@ -63,13 +63,15 @@
 	.scroll-view-box {
 		white-space: nowrap;
 		width: 100%;
+		/* padding-left: 80upx; */
+		box-sizing: border-box;
 	}
 	.scroll-view-item {
 		position: relative;
 		display: inline-block;
 		height: 100upx;
 		line-height: 100upx;
-		padding: 0 30upx;
+		padding: 0 20upx;
 		font-size: 32upx;
 	}
 	.scroll-view-item.active {
@@ -90,7 +92,7 @@
 	}
 	
 	.video-list {
-		padding-top: 140upx;
+		/* padding-top: 140upx; */
 		/* height: 1000upx; */
 	}
 </style>

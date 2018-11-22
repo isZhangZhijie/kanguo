@@ -1,14 +1,11 @@
 @import "../../common/vendor.wxss";
 
 .container {
-  padding-bottom: 150rpx;
   background: #e6e6e6;
 }
 .top-bar {
   padding-top: 40rpx;
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100%;
   background: #fff;
   box-shadow: 0 10rpx 10rpx rgba(0,0,0,.2);
@@ -24,13 +21,14 @@
 .scroll-view-box {
   white-space: nowrap;
   width: 100%;
+  box-sizing: border-box;
 }
 .scroll-view-item {
   position: relative;
   display: inline-block;
   height: 100rpx;
   line-height: 100rpx;
-  padding: 0 30rpx;
+  padding: 0 20rpx;
   font-size: 32rpx;
 }
 .scroll-view-item.active {
@@ -48,9 +46,6 @@
   height: 10rpx;
   background: #feda46;
   content: '';
-}
-.video-list {
-  padding-top: 140rpx;
 }
 ._video {
   position: relative;

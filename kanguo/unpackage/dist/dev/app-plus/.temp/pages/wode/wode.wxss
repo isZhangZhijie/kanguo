@@ -97,7 +97,3 @@
   color: #363636;
   text-align: center;
 }
-.quit-row {
-  padding-bottom: 220rpx;
-  padding-top: 100rpx;
-}

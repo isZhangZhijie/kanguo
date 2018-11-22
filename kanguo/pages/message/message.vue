@@ -7,17 +7,17 @@
 					<image src="../../static/images/massage_button_fensi@3x.png" mode="widthFix"></image>
 					粉丝
 				</view>
-				<view class="type-item">
+				<view class="type-item" @tap="goDianzan">
 					<image src="../../static/images/massage_button_dianzan@3x.png" mode="widthFix"></image>
 					点赞
 					<view class="msg-num">5</view>
 				</view>
-				<view class="type-item">
+				<view class="type-item" @tap="goAtWode">
 					<image src="../../static/images/massage_button_mine@3x.png" mode="widthFix"></image>
 					@我的
 					<view class="msg-num">10</view>
 				</view>
-				<view class="type-item">
+				<view class="type-item" @tap="goPinglun">
 					<image src="../../static/images/massage_button_pinglun@3x.png" mode="widthFix"></image>
 					评论
 				</view>
@@ -37,7 +37,7 @@
 				</view>
 			</view>
 		</view>
-		<footfoot></footfoot>
+		<!-- <footfoot></footfoot> -->
 	</view>
 </template>
 
@@ -63,10 +63,22 @@
 			},
 			goFensi() {
 				uni.navigateTo({
-					url: './fensi/fensi',
-					success: res => {},
-					fail: () => {},
-					complete: () => {}
+					url: './fensi/fensi'
+				});
+			},
+			goDianzan() {
+				uni.navigateTo({
+					url: './dianzan/dianzan'
+				});
+			},
+			goAtWode() {
+				uni.navigateTo({
+					url: './wodw/wodw'
+				});
+			},
+			goPinglun() {
+				uni.navigateTo({
+					url: './pinglun/pinglun'
 				});
 			}
 		}
