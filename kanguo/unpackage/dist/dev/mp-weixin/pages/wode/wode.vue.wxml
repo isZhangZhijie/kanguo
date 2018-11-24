@@ -8,11 +8,11 @@
       <image class="_image data-v-62302380 arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
     </view>
     <view class="_view data-v-62302380 user-data-row wode-row">
-      <view class="_view data-v-62302380">
+      <view class="_view data-v-62302380" bindtap="handleProxy" data-eventid="{{'OcI-0'}}" data-comkey="{{$k}}">
         <text class="_text data-v-62302380 num">42</text>
         <text class="_text data-v-62302380 text">动态</text>
       </view>
-      <view class="_view data-v-62302380">
+      <view class="_view data-v-62302380" bindtap="handleProxy" data-eventid="{{'WUz-1'}}" data-comkey="{{$k}}">
         <text class="_text data-v-62302380 num">28</text>
         <text class="_text data-v-62302380 text">关注</text>
       </view>

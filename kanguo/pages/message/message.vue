@@ -73,7 +73,7 @@
 			},
 			goAtWode() {
 				uni.navigateTo({
-					url: './wodw/wodw'
+					url: './wode/wode'
 				});
 			},
 			goPinglun() {

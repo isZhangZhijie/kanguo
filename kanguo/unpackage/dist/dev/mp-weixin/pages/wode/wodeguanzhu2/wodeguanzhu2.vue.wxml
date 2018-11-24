@@ -1,0 +1,12 @@
+<template name="1b2ec019">
+  <view class="_view data-v-6ecafa78 page">
+    <view class="_view data-v-6ecafa78 header">
+      <view class="_view data-v-6ecafa78 statusBar" style=" {{('height:' + (statusBarHeight + 'px') + ';')}}"></view>
+      <view class="_view data-v-6ecafa78 info">
+        <text style="font-size: 16px;margin-right: 50rpx;" class="_text data-v-6ecafa78">用户</text>
+        <text class="_text data-v-6ecafa78 active" style="font-size: 16px;">影剧</text>
+        <image src="../../../static/images/common_return@3x.png" mode="widthFix" class="_image data-v-6ecafa78 go-wode" bindtap="handleProxy" data-eventid="{{'0I8-0'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+  </view>
+</template>

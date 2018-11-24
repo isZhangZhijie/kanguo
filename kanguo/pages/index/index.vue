@@ -6,12 +6,10 @@
 			<view class="sel-bar">
 				<scroll-view scroll-x="true" class="scroll-view-box">
 					<view id="" class="scroll-view-item" style="width: 100upx;color:#FFF;">1</view>
-					<view id="" class="scroll-view-item active">近期热播</view>
-					<view id="" class="scroll-view-item">人气榜</view>
-					<view id="" class="scroll-view-item">获赞榜</view>
-					<view id="" class="scroll-view-item">收藏榜</view>
-					<view id="" class="scroll-view-item">精选</view>
-					<view id="" class="scroll-view-item">关注</view>
+					<view id="" class="scroll-view-item active">人气热播</view>
+					<view id="" class="scroll-view-item">精品收藏</view>
+					<view id="" class="scroll-view-item">最新上映</view>
+					<view id="" class="scroll-view-item">为您推荐</view>
 				</scroll-view>
 			</view>
         </view>

@@ -1,0 +1,14 @@
+<template name="2c584932">
+  <view class="_view data-v-0296cec0 page">
+    <view class="_view data-v-0296cec0 header">
+      <view class="_view data-v-0296cec0 statusBar" style=" {{('height:' + (statusBarHeight + 'px') + ';')}}"></view>
+      <view class="_view data-v-0296cec0 info">
+        <text style="font-size: 16px;margin-right: 50rpx;" bindtap="handleProxy" data-eventid="{{'5X3-0'}}" data-comkey="{{$k}}" class="_text data-v-0296cec0 {{[showYonghu ? 'active' : '']}}">用户</text>
+        <text style="font-size: 16px;" bindtap="handleProxy" data-eventid="{{'ZEg-1'}}" data-comkey="{{$k}}" class="_text data-v-0296cec0 {{[showYonghu ? '' : 'active']}}">影剧</text>
+        <image src="../../../static/images/common_return@3x.png" mode="widthFix" class="_image data-v-0296cec0 go-wode" bindtap="handleProxy" data-eventid="{{'n0F-2'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+    <view class="_view data-v-0296cec0" wx:if="{{showYonghu}}"> 123 </view>
+    <view class="_view data-v-0296cec0" wx:else> 456 </view>
+  </view>
+</template>

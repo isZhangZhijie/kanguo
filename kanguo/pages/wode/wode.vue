@@ -10,11 +10,11 @@
 			<image class="arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
 		</view>
 		<view class="user-data-row wode-row">
-			<view class="">
+			<view class="" @tap="goDongtai">
 				<text class="num">42</text>
 				<text class="text">动态</text>
 			</view>
-			<view class="">
+			<view class="" @tap="goWodeguanzhu">
 				<text class="num">28</text>
 				<text class="text">关注</text>
 			</view>
@@ -62,6 +62,18 @@
 			return {
 				
 			};
+		},
+		methods: {
+			goDongtai() {
+				uni.navigateTo({
+					url: './dongtai/dongtai',
+				});
+			},
+			goWodeguanzhu() {
+				uni.navigateTo({
+					url: './wodeguanzhu/wodeguanzhu',
+				});
+			}
 		}
 	}
 </script>

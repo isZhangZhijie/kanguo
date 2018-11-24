@@ -6,17 +6,15 @@
       <view class="_view data-v-49887f46 sel-bar">
         <scroll-view scroll-x="true" class="_scroll-view data-v-49887f46 scroll-view-box">
           <view id class="_view data-v-49887f46 scroll-view-item" style="width: 100rpx;color:#FFF;">1</view>
-          <view id class="_view data-v-49887f46 scroll-view-item active">近期热播</view>
-          <view id class="_view data-v-49887f46 scroll-view-item">人气榜</view>
-          <view id class="_view data-v-49887f46 scroll-view-item">获赞榜</view>
-          <view id class="_view data-v-49887f46 scroll-view-item">收藏榜</view>
-          <view id class="_view data-v-49887f46 scroll-view-item">精选</view>
-          <view id class="_view data-v-49887f46 scroll-view-item">关注</view>
+          <view id class="_view data-v-49887f46 scroll-view-item active">人气热播</view>
+          <view id class="_view data-v-49887f46 scroll-view-item">精品收藏</view>
+          <view id class="_view data-v-49887f46 scroll-view-item">最新上映</view>
+          <view id class="_view data-v-49887f46 scroll-view-item">为您推荐</view>
         </scroll-view>
       </view>
     </view>
     <view class="_view data-v-49887f46 video-list">
-      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'tTk-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'QOG-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
     </view>
   </view>
 </template>
