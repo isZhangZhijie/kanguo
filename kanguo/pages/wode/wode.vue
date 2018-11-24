@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<image class="top-bg" src="../../static/images/my_userBG@3x.png" mode="widthFix"></image>
-		<view class="user-row wode-row">
+		<view class="user-row wode-row" @tap="goBianji">
 			<view class="avatar">
 				<image src="../../static/images/massage_button_mine@3x.png" mode="widthFix"></image>
 				欢迎来到看过
@@ -38,7 +38,7 @@
 			设置
 			<image class="arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
 		</view>
-		<view class="action-row wode-row">
+		<view class="action-row wode-row" @tap="goFankui">
 			<image class="action-img" src="../../static/images/my_buttton_help@3x.png" mode="widthFix"></image>
 			帮助与反馈
 			<image class="arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
@@ -64,6 +64,11 @@
 			};
 		},
 		methods: {
+			goBianji() {
+				uni.navigateTo({
+					url: './bianji/bianji',
+				});
+			},
 			goDongtai() {
 				uni.navigateTo({
 					url: './dongtai/dongtai',
@@ -92,6 +97,11 @@
 			goShezhi() {
 				uni.navigateTo({
 					url: './shezhi/shezhi',
+				});
+			},
+			goFankui() {
+				uni.navigateTo({
+					url: './fankui/fankui',
 				});
 			}
 		}

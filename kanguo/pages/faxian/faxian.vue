@@ -6,7 +6,7 @@
 					<image src="../../static/images/massge_button_find@3x.png" mode="widthFix"></image>
 					搜你想看
 				</view>
-				<view class="view-history">
+				<view class="view-history" @tap="goLishi">
 					<image src="../../static/images/massge_button_visited@3x.png" mode="widthFix"></image>
 					记录
 				</view>
@@ -20,7 +20,7 @@
 			</view>
 		</view>
 		<view class="img-list">
-			<view class="img-item xtb-3dots" v-for="(imgItem, index) in [1,2,3,4,5,6,7,8,9,10]" :key="index">
+			<view class="img-item xtb-3dots" v-for="(imgItem, index) in [1,2,3,4,5,6,7,8,9,10]" :key="index" @tap="goKanju">
 				<image src="../../static/images/juzhao.png" mode="widthFix"></image>
 				极速青春
 			</view>
@@ -47,8 +47,17 @@
 				selected: [0, 1, 2, 0]
 			};
 		},
-		onLoad() {
-			
+		methods: {
+			goLishi() {
+				uni.navigateTo({
+					url: '../wode/lishi/lishi',
+				});
+			},
+			goKanju() {
+				uni.navigateTo({
+					url: '../kanju/kanju',
+				});
+			}
 		}
 	}
 </script>

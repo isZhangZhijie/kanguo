@@ -144,8 +144,30 @@
         {
             "path" : "pages/wode/shezhi/shezhi",
             "style" : {
-				"navigationBarTitleText" : "设置",
-				"navigationBarBackgroundColor" : "#feda46"
+                "navigationBarTitleText" : "设置",
+                "navigationBarBackgroundColor" : "#feda46"
+            }
+        },
+        {
+            "path" : "pages/wode/bianji/bianji",
+            "style" : {
+                "navigationBarTitleText" : "编辑资料",
+                "navigationBarBackgroundColor" : "#fff"
+            }
+        },
+        {
+            "path" : "pages/wode/fankui/fankui",
+            "style" : {
+                "navigationBarTitleText" : "帮助与反馈",
+                "navigationBarBackgroundColor" : "#feda46"
+            }
+        },
+        {
+            "path" : "pages/kanju/kanju",
+            "style" : {
+				"app-plus" : {
+					"titleNView" : false // 单独此页面无顶部导航
+				}
 			}
         }
     ],
