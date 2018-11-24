@@ -1,0 +1,14 @@
+@import "../../../common/vendor.wxss";
+
+.time-row {
+  padding: 20rpx 40rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 38rpx;
+  color: #666;
+  background: #fff;
+}
+.time-row text {
+  padding: 0 10rpx;
+  color: #363636;
+  font-weight: bold;
+}

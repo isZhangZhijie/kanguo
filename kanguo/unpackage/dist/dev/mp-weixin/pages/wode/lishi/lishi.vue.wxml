@@ -1,0 +1,16 @@
+<template name="3fdb852f">
+  <view class="_view data-v-423cef70">
+    <view class="_view data-v-423cef70 time-row">
+      <text class="_text data-v-423cef70">今天</text>共观看25个视频 </view>
+    <view class="_view data-v-423cef70 video-list">
+      <view class="_view data-v-423cef70 video-item" wx:key="index" key="{{index}}" wx:for="{{videoList}}" wx:for-index="index" wx:for-item="item">
+        <view class="_view data-v-423cef70 img-box img-box-width100">
+          <image src="../../../static/images/juzhao.png" mode="widthFix" class="_image data-v-423cef70"></image>
+          <view class="_view data-v-423cef70 shadow"></view>
+          <text class="_text data-v-423cef70">热度：23W+</text>
+        </view>
+        <view class="_view data-v-423cef70 title xtb-3dots"> 周润发郭富城刘德华梁朝伟 </view>
+      </view>
+    </view>
+  </view>
+</template>

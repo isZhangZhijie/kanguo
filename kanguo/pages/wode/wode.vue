@@ -18,22 +18,22 @@
 				<text class="num">28</text>
 				<text class="text">关注</text>
 			</view>
-			<view class="">
+			<view class="" @tap="goWodefensi">
 				<text class="num">2</text>
 				<text class="text">粉丝</text>
 			</view>
 		</view>
-		<view class="action-row wode-row">
+		<view class="action-row wode-row" @tap="goLishi">
 			<image class="action-img" src="../../static/images/my_buttton_visted@3x.png" mode="widthFix"></image>
 			观看历史
 			<image class="arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
 		</view>
-		<view class="action-row wode-row">
+		<view class="action-row wode-row" @tap="goShoucang">
 			<image class="action-img" src="../../static/images/my_buttton_keep@3x.png" mode="widthFix"></image>
 			我的收藏
 			<image class="arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
 		</view>
-		<view class="action-row wode-row">
+		<view class="action-row wode-row" @tap="goShezhi">
 			<image class="action-img" src="../../static/images/my_buttton_set@3x.png" mode="widthFix"></image>
 			设置
 			<image class="arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
@@ -73,6 +73,26 @@
 				uni.navigateTo({
 					url: './wodeguanzhu/wodeguanzhu',
 				});
+			},
+			goWodefensi() {
+				uni.navigateTo({
+					url: './wodefensi/wodefensi',
+				});
+			},
+			goLishi() {
+				uni.navigateTo({
+					url: './lishi/lishi',
+				});
+			},
+			goShoucang() {
+				uni.navigateTo({
+					url: './shoucang/shoucang',
+				});
+			},
+			goShezhi() {
+				uni.navigateTo({
+					url: './shezhi/shezhi',
+				});
 			}
 		}
 	}
@@ -111,7 +131,7 @@
 	}
 	.arrow-right {
 		position: absolute;
-		width: 30upx;
+		width: 26upx;
 		right: 40upx;
 		top: 0;
 		bottom: 0;
@@ -129,13 +149,13 @@
 		align-items: center;
 	}
 	.user-data-row .num {
-		font-size: 40upx;
+		font-size: 38upx;
 		color: #363636;
 		font-family: arial;
 		font-weight: bold;
 	}
 	.user-data-row .text {
-		font-size: 38upx;
+		font-size: 36upx;
 		color: #666;
 	}
 	.action-row {
@@ -143,11 +163,11 @@
 		justify-content: flex-start;
 		align-items: center;
 		border-bottom: 1px solid #e9e9e9;
-		font-size: 40upx;
+		font-size: 38upx;
 		color: #666;
 	}
 	.action-row .action-img {
-		width: 70upx;
+		width: 66upx;
 		margin-right: 20upx;
 	}
 	.quit-login {

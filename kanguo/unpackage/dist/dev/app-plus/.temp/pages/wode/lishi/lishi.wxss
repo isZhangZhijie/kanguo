@@ -1,0 +1,53 @@
+@import "../../../common/vendor.wxss";
+
+.time-row {
+  padding: 20rpx 40rpx;
+  border-bottom: 1px solid #eee;
+  font-size: 38rpx;
+  color: #666;
+  background: #fff;
+}
+.time-row text {
+  padding-right: 10rpx;
+  color: #363636;
+  font-weight: bold;
+}
+.video-list {
+  padding: 40rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.video-item {
+  width: 310rpx;
+  margin-bottom: 20rpx;
+}
+.video-item .img-box {
+  height: 240rpx;
+  border-radius: 20rpx;
+}
+.video-item text {
+  position: absolute;
+  left: 30rpx;
+  bottom: 0rpx;
+  font-size: 36rpx;
+  color: #fff;
+}
+.shadow {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  box-shadow: 0 0 40rpx 40rpx rgba(0,0,0,.4);
+}
+.title {
+  width: 100%;
+  padding: 0;
+  font-size: 38rpx;
+}

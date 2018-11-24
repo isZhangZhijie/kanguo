@@ -31,6 +31,24 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
+	/* 图片居中 */
+	.img-box {
+		position: relative;
+		display: block;
+		overflow: hidden;
+	}
+	.img-box image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: auto;
+		height: 100%;
+	}
+	.img-box-width100 image {
+		width: 100%;
+		height: auto;
+	}
 	
 	/* 其他登录方式 */
 	.other-login-way {

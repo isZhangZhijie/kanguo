@@ -119,47 +119,79 @@
                     "titleNView" : false // 单独此页面无顶部导航
                 }
             }
+        },
+        {
+            "path" : "pages/wode/wodefensi/wodefensi",
+            "style" : {
+                "navigationBarTitleText" : "我的粉丝",
+                "navigationBarBackgroundColor" : "#feda46"
+            }
+        },
+        {
+            "path" : "pages/wode/lishi/lishi",
+            "style" : {
+                "navigationBarTitleText" : "观看历史",
+                "navigationBarBackgroundColor" : "#feda46"
+            }
+        },
+        {
+            "path" : "pages/wode/shoucang/shoucang",
+            "style" : {
+                "navigationBarTitleText" : "我的收藏",
+                "navigationBarBackgroundColor" : "#feda46"
+            }
+        },
+        {
+            "path" : "pages/wode/shezhi/shezhi",
+            "style" : {
+				"navigationBarTitleText" : "设置",
+				"navigationBarBackgroundColor" : "#feda46"
+			}
         }
     ],
     "condition" : {
         //模式配置，仅开发期间生效
-        "current" : 0, //当前激活的模式（list 的索引项）
+        "current" : 8, //当前激活的模式（list 的索引项）
         "list" : [
             {
-                "name" : "wodeguanzhu", //模式名称
+                "name" : "wodeguanzhu", //模式名称0
                 "path" : "pages/wode/wodeguanzhu/wodeguanzhu" //启动页面，必选
             },
             {
-                "name" : "test", //模式名称
+                "name" : "test", //模式名称1
                 "path" : "pages/index/index" //启动页面，必选
             },
             {
-                "name" : "faxian", //模式名称
+                "name" : "faxian", //模式名称2
                 "path" : "pages/faxian/faxian" //启动页面，必选
             },
             {
-                "name" : "message", //模式名称
+                "name" : "message", //模式名称3
                 "path" : "pages/message/message" //启动页面，必选
             },
             {
-                "name" : "xitong", //模式名称
+                "name" : "xitong", //模式名称4
                 "path" : "pages/message/xitong/xitong" //启动页面，必选
             },
             {
-                "name" : "fensi", //模式名称
+                "name" : "fensi", //模式名称5
                 "path" : "pages/message/fensi/fensi" //启动页面，必选
             },
             {
-                "name" : "dianzan", //模式名称
+                "name" : "dianzan", //模式名称6
                 "path" : "pages/message/dianzan/dianzan" //启动页面，必选
             },
             {
-                "name" : "pinglun", //模式名称
+                "name" : "pinglun", //模式名称7
                 "path" : "pages/message/pinglun/pinglun" //启动页面，必选
             },
             {
-                "name" : "wode", //模式名称
+                "name" : "wode", //模式名称8
                 "path" : "pages/wode/wode" //启动页面，必选
+            },
+            {
+                "name" : "lishi", //模式名称9
+                "path" : "pages/wode/lishi/lishi" //启动页面，必选
             }
         ]
     },

@@ -8,15 +8,19 @@
 			<image src="../../../static/images/common_return@3x.png" mode="widthFix" class="go-wode" @tap="goWode"></image>
 		</view>
     </view>
-	<view class="" v-if="showYonghu">
+	<view class="" v-show="showYonghu">
 		<view class="yonghu-list" v-if="yonghuList.length > 0">
 			<view class="yonghu-num">您关注了{{yonghuList.length}}位用户</view>
 			<view class="msg-list">
-				<view class="msg-item" v-for="(i,index) in yonghuList" :key="index">
+				<view class="msg-item yonghu-item" v-for="(i,index) in yonghuList" :key="index">
 					<image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix"></image>
 					<view class="msg-detail">
 						<view class="msg-title">我是谁</view>
 						<view class="msg-text">幽默影剧发布人</view>
+					</view>
+					<view class="guanzhu-btn">
+						<image src="../../../static/images/common_del@3x.png" mode="widthFix"></image>
+						取关
 					</view>
 				</view>
 			</view>
@@ -26,15 +30,18 @@
 			<view class="no-yonghu-text2">错过的精彩那么大</view>
 		</view>
 	</view>
-	<view class="" v-else>
+	<view class="" v-show="!showYonghu">
 		<view class="yonghu-list" v-if="yingjuList.length > 0">
-			<view class="yonghu-num">您关注了{{yonghuList.length}}位用户</view>
 			<view class="msg-list">
-				<view class="msg-item" v-for="(i,index) in yonghuList" :key="index">
-					<image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix"></image>
+				<view class="msg-item yingju-item" v-for="(i,index) in yonghuList" :key="index">
+					<image class="" src="../../../static/images/juzhao.png" mode="widthFix"></image>
 					<view class="msg-detail">
-						<view class="msg-title">我是谁</view>
-						<view class="msg-text">幽默影剧发布人</view>
+						<view class="msg-title">蚀日风暴</view>
+						<view class="msg-text">1234精彩影评</view>
+					</view>
+					<view class="guanzhu-btn">
+						<image src="../../../static/images/common_del@3x.png" mode="widthFix"></image>
+						关注
 					</view>
 				</view>
 			</view>
@@ -52,8 +59,8 @@ export default {
     data: {
         statusBarHeight: '',
 		showYonghu: true,
-		yonghuList: [1,2,3,4,5],
-		yingjuList: []
+		yonghuList: [1,2,3,4,5,6,7,8,9],
+		yingjuList: [1,2,3,4,5,6,7,8,9]
     },
     created() {
         let _t = this;
@@ -99,6 +106,7 @@ export default {
     top: 0;
 	border-bottom: 1upx solid #c9c9c9;
 	background-color: #fff;
+	z-index: 100;
 }
 .info {
 	position: relative;
@@ -153,6 +161,7 @@ export default {
 }
 
 .msg-item {
+	position: relative;
 	padding: 30upx 40upx;
 	border-bottom: 1px solid #c9c9c9;
 	display: flex;
@@ -162,8 +171,10 @@ export default {
 }
 .msg-item > image {
 	width: 140upx;
-	border-radius: 50%;
 	margin-right: 20upx;
+}
+.yonghu-item > image {
+	border-radius: 50%;
 }
 .msg-detail {
 	flex-grow: 1;
@@ -172,7 +183,7 @@ export default {
 .msg-title {
 	display: flex;
 	justify-content: space-between;
-	font-size: 36upx;
+	font-size: 40upx;
 	font-weight: bold;
 	color: #363636;
 }
@@ -182,4 +193,24 @@ export default {
 	justify-content: space-between;
 	width: 100%;
 }
+.guanzhu-btn {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 40upx;
+	width: 140upx;
+	height: 70upx;
+	color: #fff;
+	font-size: 38upx;
+	border-radius: 70upx;
+	background: #fe4646;
+}
+.guanzhu-btn image {
+	width: 28upx;
+}
+	
 </style>
