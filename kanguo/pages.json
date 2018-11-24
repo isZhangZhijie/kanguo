@@ -173,7 +173,7 @@
     ],
     "condition" : {
         //模式配置，仅开发期间生效
-        "current" : 8, //当前激活的模式（list 的索引项）
+        "current" : 10, //当前激活的模式（list 的索引项）
         "list" : [
             {
                 "name" : "wodeguanzhu", //模式名称0
@@ -214,6 +214,10 @@
             {
                 "name" : "lishi", //模式名称9
                 "path" : "pages/wode/lishi/lishi" //启动页面，必选
+            },
+            {
+                "name" : "kanju", //模式名称10
+                "path" : "pages/kanju/kanju" //启动页面，必选
             }
         ]
     },
