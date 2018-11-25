@@ -1,0 +1,13 @@
+<template name="b3bf0144">
+  <view class="_view data-v-2983d3b8 index">
+    <view class="_view data-v-2983d3b8">
+      <video src="http://vjs.zencdn.net/v/oceans.mp4" controls class="_video data-v-2983d3b8"></video>
+    </view>
+    <view id="tab-bar" class="_view data-v-2983d3b8 swiper-tab">
+      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'yly-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-2983d3b8 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+    </view>
+    <swiper current="{{tabIndex}}" class="_swiper data-v-2983d3b8 swiper-box" duration="300" bindchange="handleProxy" data-eventid="{{'Ek8-1'}}" data-comkey="{{$k}}">
+      <swiper-item wx:key="index1" key="{{index1}}" wx:for="{{newsitems}}" wx:for-index="index1" wx:for-item="tab" class="_swiper-item data-v-2983d3b8"> {{tab}} </swiper-item>
+    </swiper>
+  </view>
+</template>

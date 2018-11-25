@@ -1,1 +1,1 @@
-<import src="/pages/wode/shoucang/shoucang.vue.wxml" /><template is="103020f9" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/wode/shoucang/shoucang.vue.wxml" /><template is="58d52656" data="{{ ...$root['0'], $root }}"/>

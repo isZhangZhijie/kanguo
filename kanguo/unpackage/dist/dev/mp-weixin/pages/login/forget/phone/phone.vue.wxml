@@ -1,17 +1,17 @@
-<template name="6da28204">
-  <view class="_view data-v-264a65b0 container">
-    <view class="_view data-v-264a65b0 login-page-top">
-      <view class="_view data-v-264a65b0 login-input phone-num">
-        <image src="../../../../static/images/login_signPhone@3x.png" mode="aspectFit" class="_image data-v-264a65b0"></image>
-        <input type="number" focus="true" value="{{inputClearValue}}" bindinput="handleProxy" placeholder="请输入手机号码" data-eventid="{{'cFZ-0'}}" data-comkey="{{$k}}" class="_input data-v-264a65b0" />
-        <view class="_view data-v-264a65b0 uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'ac8-1'}}" data-comkey="{{$k}}"></view>
+<template name="26377240">
+  <view class="_view data-v-a5f10198 container">
+    <view class="_view data-v-a5f10198 login-page-top">
+      <view class="_view data-v-a5f10198 login-input phone-num">
+        <image src="../../../../static/images/login_signPhone@3x.png" mode="aspectFit" class="_image data-v-a5f10198"></image>
+        <input type="number" focus="true" value="{{inputClearValue}}" bindinput="handleProxy" placeholder="请输入手机号码" data-eventid="{{'hKF-0'}}" data-comkey="{{$k}}" class="_input data-v-a5f10198" />
+        <view class="_view data-v-a5f10198 uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'VVQ-1'}}" data-comkey="{{$k}}"></view>
       </view>
-      <view bindtap="handleProxy" class="_view data-v-264a65b0 login-btn" data-eventid="{{'hlo-2'}}" data-comkey="{{$k}}">获取验证码</view>
+      <view bindtap="handleProxy" class="_view data-v-a5f10198 login-btn" data-eventid="{{'UE5-2'}}" data-comkey="{{$k}}">获取验证码</view>
     </view>
-    <view class="_view data-v-264a65b0 other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
-      <text class="_text data-v-264a65b0">其他方式登录</text>
-      <view class="_view data-v-264a65b0 other-way-list">
-        <image bindtap="handleProxy" class="_image data-v-264a65b0 other-login" src="../../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'dxw-3'}}" data-comkey="{{$k}}"></image>
+    <view class="_view data-v-a5f10198 other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
+      <text class="_text data-v-a5f10198">其他方式登录</text>
+      <view class="_view data-v-a5f10198 other-way-list">
+        <image bindtap="handleProxy" class="_image data-v-a5f10198 other-login" src="../../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'jBu-3'}}" data-comkey="{{$k}}"></image>
       </view>
     </view>
   </view>

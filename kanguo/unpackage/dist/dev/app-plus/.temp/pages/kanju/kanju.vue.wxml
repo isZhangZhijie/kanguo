@@ -1,20 +1,13 @@
-<template name="46acf9ba">
-  <view class="_view data-v-395a5628 index">
-    <view class="_view data-v-395a5628">
-      <video src="http://vjs.zencdn.net/v/oceans.mp4" controls class="_video data-v-395a5628"></video>
+<template name="b3bf0144">
+  <view class="_view data-v-2983d3b8 index">
+    <view class="_view data-v-2983d3b8">
+      <video src="http://vjs.zencdn.net/v/oceans.mp4" controls class="_video data-v-2983d3b8"></video>
     </view>
-    <scroll-view id="tab-bar" class="_scroll-view data-v-395a5628 swiper-tab" scroll-x scroll-left="{{scrollLeft}}">
-      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'mGm-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-395a5628 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
-    </scroll-view>
-    <swiper current="{{tabIndex}}" class="_swiper data-v-395a5628 swiper-box" duration="300" bindchange="handleProxy" data-eventid="{{'Hau-2'}}" data-comkey="{{$k}}">
-      <swiper-item wx:key="index1" key="{{index1}}" wx:for="{{newsitems}}" wx:for-index="index1" wx:for-item="tab" class="_swiper-item data-v-395a5628">
-        <scroll-view class="_scroll-view data-v-395a5628 list" scroll-y bindscrolltolower="handleProxy" data-eventid="{{'7dc-1-'+index1}}" data-comkey="{{$k}}">
-          <block wx:key="index2" key="{{index2}}" wx:for="{{tab.data}}" wx:for-index="index2" wx:for-item="newsitem"></block>
-          <view class="_view data-v-395a5628 loadmore">
-            <text class="_text data-v-395a5628 loadmore-text">{{tab.loadingText}}</text>
-          </view>
-        </scroll-view>
-      </swiper-item>
+    <view id="tab-bar" class="_view data-v-2983d3b8 swiper-tab">
+      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'EeY-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-2983d3b8 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+    </view>
+    <swiper current="{{tabIndex}}" class="_swiper data-v-2983d3b8 swiper-box" duration="300" bindchange="handleProxy" data-eventid="{{'6np-1'}}" data-comkey="{{$k}}">
+      <swiper-item wx:key="index1" key="{{index1}}" wx:for="{{newsitems}}" wx:for-index="index1" wx:for-item="tab" class="_swiper-item data-v-2983d3b8"> {{tab}} </swiper-item>
     </swiper>
   </view>
 </template>

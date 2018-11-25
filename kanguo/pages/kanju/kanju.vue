@@ -3,20 +3,13 @@
 		<view class="">
 			<video src="http://vjs.zencdn.net/v/oceans.mp4" controls></video>
 		</view>
-        <scroll-view id="tab-bar" class="swiper-tab" scroll-x :scroll-left="scrollLeft">
+        <view id="tab-bar" class="swiper-tab">
             <view v-for="(tab,index) in tabBars" :key="tab.id" :class="['swiper-tab-list',tabIndex==index ? 'active' : '']"
                 :id="tab.id" :data-current="index" @tap="tapTab">{{tab.name}}</view>
-        </scroll-view>
+        </view>
         <swiper :current="tabIndex" class="swiper-box" duration="300" @change="changeTab">
             <swiper-item v-for="(tab,index1) in newsitems" :key="index1">
-                <scroll-view class="list" scroll-y @scrolltolower="loadMore(index1)">
-                    <block v-for="(newsitem,index2) in tab.data" :key="index2">
-                        <!-- <media-list :data="newsitem" @close="close(index1,index2)" @click="goDetail(newsitem)"></media-list> -->
-                    </block>
-                    <view class="loadmore">
-                        <text class="loadmore-text">{{tab.loadingText}}</text>
-                    </view>
-                </scroll-view>
+                {{tab}}
             </swiper-item>
         </swiper>
     </view>
@@ -32,7 +25,7 @@
                 scrollLeft: 0,
                 isClickChange: false,
                 tabIndex: 0,
-                newsitems: [],
+                newsitems: [123,456],
                 data0: {
                     "datetime": "40分钟前",
                     "article_type": 0,
@@ -97,36 +90,6 @@
             this.newsitems = this.randomfn()
         },
         methods: {
-            goDetail(e) {
-                uni.navigateTo({
-                    url: '/pages/template/tabbar/detail/detail?data=' + e.title
-                })
-            },
-            close(index1, index2) {
-                uni.showModal({
-                    content: '是否删除本条信息？',
-                    success: (res) => {
-                        if (res.confirm) {
-                            this.newsitems[index1].data.splice(index2, 1);
-                        }
-                    }
-                })
-            },
-            loadMore(e) {
-            	setTimeout(() => {
-            		this.addData(e);
-            	}, 1000);
-            },
-            addData(e) {
-            	console.log("加载更多...");
-            	if (this.newsitems[e].data.length > 30) {
-            		this.newsitems[e].loadingText = '没有更多了';
-            		return;
-            	}
-            	for (let i = 1; i <= 10; i++) {
-            		this.newsitems[e].data.push(this['data' + Math.floor(Math.random() * 5)]);
-            	}
-            },
             async changeTab(e) {
                 let index = e.target.current;
                 if (this.isClickChange) {
@@ -175,20 +138,6 @@
                     this.tabIndex = e.target.dataset.current
                 }
             },
-            randomfn() {
-                let ary = [];
-                for (let i = 0, length = this.tabBars.length; i < length; i++) {
-                    let aryItem = {
-                        loadingText: "加载更多...",
-                        data: []
-                    };
-                    for (let j = 1; j <= 10; j++) {
-                        aryItem.data.push(this['data' + Math.floor(Math.random() * 5)]);
-                    }
-                    ary.push(aryItem);
-                }
-                return ary;
-            }
         }
     }
 </script>
@@ -212,9 +161,12 @@
     }
 
     .swiper-tab {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
         width: 100%;
         white-space: nowrap;
-        line-height: 100upx;
+        /* line-height: 100upx; */
         height: 100upx;
         border-bottom: 1px solid #c8c7cc;
     }

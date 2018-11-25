@@ -1,32 +1,32 @@
-<template name="0a459e56">
-  <view class="_view data-v-6ffd8d90 container">
-    <view class="_view data-v-6ffd8d90 login-page-top">
-      <view class="_view data-v-6ffd8d90 top-img">
-        <navigator class="_navigator data-v-6ffd8d90 go-back" hover-class="none" open-type="navigateBack" delta="1">
-          <image src="../../../static/images/common_return@3x.png" mode="widthFix" alt class="_image data-v-6ffd8d90"></image>
+<template name="6cffd50e">
+  <view class="_view data-v-21c7c68c container">
+    <view class="_view data-v-21c7c68c login-page-top">
+      <view class="_view data-v-21c7c68c top-img">
+        <navigator class="_navigator data-v-21c7c68c go-back" hover-class="none" open-type="navigateBack" delta="1">
+          <image src="../../../static/images/common_return@3x.png" mode="widthFix" alt class="_image data-v-21c7c68c"></image>
         </navigator>
-        <image class="_image data-v-6ffd8d90" src="../../../static/images/login_PhoneBG@3x.png" mode="widthFix"></image>
+        <image class="_image data-v-21c7c68c" src="../../../static/images/login_PhoneBG@3x.png" mode="widthFix"></image>
       </view>
-      <view class="_view data-v-6ffd8d90 login-input phone-num">
-        <image src="../../../static/images/login_signPhone@3x.png" mode="aspectFit" class="_image data-v-6ffd8d90"></image>
-        <input type="number" focus="true" value="{{inputClearValue}}" placeholder="请输入手机号码" bindinput="handleProxy" data-eventid="{{'mst-0'}}" data-comkey="{{$k}}" class="_input data-v-6ffd8d90" />
-        <view class="_view data-v-6ffd8d90 uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'aB5-1'}}" data-comkey="{{$k}}"></view>
+      <view class="_view data-v-21c7c68c login-input phone-num">
+        <image src="../../../static/images/login_signPhone@3x.png" mode="aspectFit" class="_image data-v-21c7c68c"></image>
+        <input type="number" focus="true" value="{{inputClearValue}}" placeholder="请输入手机号码" bindinput="handleProxy" data-eventid="{{'u0S-0'}}" data-comkey="{{$k}}" class="_input data-v-21c7c68c" />
+        <view class="_view data-v-21c7c68c uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'mbT-1'}}" data-comkey="{{$k}}"></view>
       </view>
-      <view class="_view data-v-6ffd8d90 login-input phone-password">
-        <image src="../../../static/images/login_signLock@3x.png" mode="aspectFit" class="_image data-v-6ffd8d90"></image>
-        <input value="" placeholder="请输入登录密码" password="{{showPassword}}" class="_input data-v-6ffd8d90" />
-        <view class="_view data-v-6ffd8d90 uni-icon uni-icon-eye {{[!showPassword ? 'uni-active' : '']}}" bindtap="handleProxy" data-eventid="{{'1O3-2'}}" data-comkey="{{$k}}"></view>
+      <view class="_view data-v-21c7c68c login-input phone-password">
+        <image src="../../../static/images/login_signLock@3x.png" mode="aspectFit" class="_image data-v-21c7c68c"></image>
+        <input value="" placeholder="请输入登录密码" password="{{showPassword}}" class="_input data-v-21c7c68c" />
+        <view class="_view data-v-21c7c68c uni-icon uni-icon-eye {{[!showPassword ? 'uni-active' : '']}}" bindtap="handleProxy" data-eventid="{{'mTp-2'}}" data-comkey="{{$k}}"></view>
       </view>
-      <view class="_view data-v-6ffd8d90 login-btn">登 录</view>
-      <view class="_view data-v-6ffd8d90 action-row">
-        <navigator url hover-class="none" class="_navigator data-v-6ffd8d90"> 快速注册 </navigator>
-        <navigator url="../forget/phone/phone" hover-class="none" class="_navigator data-v-6ffd8d90"> 忘记密码 </navigator>
+      <view class="_view data-v-21c7c68c login-btn">登 录</view>
+      <view class="_view data-v-21c7c68c action-row">
+        <navigator url hover-class="none" class="_navigator data-v-21c7c68c"> 快速注册 </navigator>
+        <navigator url="../forget/phone/phone" hover-class="none" class="_navigator data-v-21c7c68c"> 忘记密码 </navigator>
       </view>
     </view>
-    <view class="_view data-v-6ffd8d90 other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
-      <text class="_text data-v-6ffd8d90">其他方式登录</text>
-      <view class="_view data-v-6ffd8d90 other-way-list">
-        <image bindtap="handleProxy" class="_image data-v-6ffd8d90 other-login" src="../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'qlC-3'}}" data-comkey="{{$k}}"></image>
+    <view class="_view data-v-21c7c68c other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
+      <text class="_text data-v-21c7c68c">其他方式登录</text>
+      <view class="_view data-v-21c7c68c other-way-list">
+        <image bindtap="handleProxy" class="_image data-v-21c7c68c other-login" src="../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'CmX-3'}}" data-comkey="{{$k}}"></image>
       </view>
     </view>
   </view>

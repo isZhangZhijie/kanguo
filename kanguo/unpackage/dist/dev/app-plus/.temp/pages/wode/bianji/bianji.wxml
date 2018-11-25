@@ -1,1 +1,1 @@
-<import src="/pages/wode/bianji/bianji.vue.wxml" /><template is="a6ba324e" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/wode/bianji/bianji.vue.wxml" /><template is="1e6080b5" data="{{ ...$root['0'], $root }}"/>

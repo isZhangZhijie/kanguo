@@ -1,10 +1,10 @@
-<template name="336d2cb7">
-  <view class="_view data-v-cc124a10">
-    <view class="_view data-v-cc124a10 msg-list1">
-      <view class="_view data-v-cc124a10 time">13:39</view>
-      <view class="_view data-v-cc124a10 msg-item1" wx:key="index" key="{{index}}" wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:for-index="index" wx:for-item="imgItem">
-        <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-cc124a10"></image>
-        <view class="_view data-v-cc124a10 msg-text1"> 欢迎你来到看过，马上去观看最新的精彩片段吧！ </view>
+<template name="5280f55b">
+  <view class="_view data-v-82d06018">
+    <view class="_view data-v-82d06018 msg-list1">
+      <view class="_view data-v-82d06018 time">13:39</view>
+      <view class="_view data-v-82d06018 msg-item1" wx:key="index" key="{{index}}" wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:for-index="index" wx:for-item="imgItem">
+        <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-82d06018"></image>
+        <view class="_view data-v-82d06018 msg-text1"> 欢迎你来到看过，马上去观看最新的精彩片段吧！ </view>
       </view>
     </view>
   </view>

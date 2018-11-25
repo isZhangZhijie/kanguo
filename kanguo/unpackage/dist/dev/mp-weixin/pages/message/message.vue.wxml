@@ -1,31 +1,31 @@
-<template name="025d747c">
-  <view class="_view data-v-43411a70">
-    <view class="_view data-v-43411a70 top-bar">
-      <view class="_view data-v-43411a70 top-text">消息</view>
-      <view class="_view data-v-43411a70 msg-type">
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'XSp-0'}}" data-comkey="{{$k}}">
-          <image src="../../static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 粉丝 </view>
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'j2G-1'}}" data-comkey="{{$k}}">
-          <image src="../../static/images/massage_button_dianzan@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 点赞
-          <view class="_view data-v-43411a70 msg-num">5</view>
+<template name="6ffd4d34">
+  <view class="_view data-v-45e70728">
+    <view class="_view data-v-45e70728 top-bar">
+      <view class="_view data-v-45e70728 top-text">消息</view>
+      <view class="_view data-v-45e70728 msg-type">
+        <view class="_view data-v-45e70728 type-item" bindtap="handleProxy" data-eventid="{{'0QY-0'}}" data-comkey="{{$k}}">
+          <image src="../../static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-45e70728"></image> 粉丝 </view>
+        <view class="_view data-v-45e70728 type-item" bindtap="handleProxy" data-eventid="{{'Alz-1'}}" data-comkey="{{$k}}">
+          <image src="../../static/images/massage_button_dianzan@3x.png" mode="widthFix" class="_image data-v-45e70728"></image> 点赞
+          <view class="_view data-v-45e70728 msg-num">5</view>
         </view>
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'pOA-2'}}" data-comkey="{{$k}}">
-          <image src="../../static/images/massage_button_mine@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> @我的
-          <view class="_view data-v-43411a70 msg-num">10</view>
+        <view class="_view data-v-45e70728 type-item" bindtap="handleProxy" data-eventid="{{'42k-2'}}" data-comkey="{{$k}}">
+          <image src="../../static/images/massage_button_mine@3x.png" mode="widthFix" class="_image data-v-45e70728"></image> @我的
+          <view class="_view data-v-45e70728 msg-num">10</view>
         </view>
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'POV-3'}}" data-comkey="{{$k}}">
-          <image src="../../static/images/massage_button_pinglun@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 评论 </view>
+        <view class="_view data-v-45e70728 type-item" bindtap="handleProxy" data-eventid="{{'nSz-3'}}" data-comkey="{{$k}}">
+          <image src="../../static/images/massage_button_pinglun@3x.png" mode="widthFix" class="_image data-v-45e70728"></image> 评论 </view>
       </view>
     </view>
-    <view class="_view data-v-43411a70 msg-list">
-      <view class="_view data-v-43411a70 msg-item" bindtap="handleProxy" data-eventid="{{'KN6-4'}}" data-comkey="{{$k}}">
-        <image src="../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-43411a70"></image>
-        <view class="_view data-v-43411a70 msg-detail">
-          <view class="_view data-v-43411a70 msg-title">
-            <text class="_text data-v-43411a70">系统通知</text>
-            <text class="_text data-v-43411a70 time">13:39</text>
+    <view class="_view data-v-45e70728 msg-list">
+      <view class="_view data-v-45e70728 msg-item" bindtap="handleProxy" data-eventid="{{'eWq-4'}}" data-comkey="{{$k}}">
+        <image src="../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-45e70728"></image>
+        <view class="_view data-v-45e70728 msg-detail">
+          <view class="_view data-v-45e70728 msg-title">
+            <text class="_text data-v-45e70728">系统通知</text>
+            <text class="_text data-v-45e70728 time">13:39</text>
           </view>
-          <view class="_view data-v-43411a70 msg-text"> 欢迎你来到看过，马上去观看最新的精彩片段吧！ </view>
+          <view class="_view data-v-45e70728 msg-text"> 欢迎你来到看过，马上去观看最新的精彩片段吧！ </view>
         </view>
       </view>
     </view>
