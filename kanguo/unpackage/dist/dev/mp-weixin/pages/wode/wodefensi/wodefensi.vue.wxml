@@ -1,23 +1,23 @@
-<template name="e4a16e16">
-  <view class="_view data-v-20567394 page">
-    <view class="_view data-v-20567394">
-      <view class="_view data-v-20567394 yonghu-list" wx:if="{{yonghuList.length > 0}}">
-        <view class="_view data-v-20567394 yonghu-num">有{{yonghuList.length}}位用户关注了你</view>
-        <view class="_view data-v-20567394 msg-list">
-          <view class="_view data-v-20567394 msg-item yonghu-item" wx:key="index" key="{{index}}" wx:for="{{yonghuList}}" wx:for-index="index" wx:for-item="i">
-            <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-20567394"></image>
-            <view class="_view data-v-20567394 msg-detail">
-              <view class="_view data-v-20567394 msg-title">我是谁</view>
-              <view class="_view data-v-20567394 msg-text">幽默影剧发布人</view>
+<template name="0e6d8419">
+  <view class="_view data-v-6917acb2 page">
+    <view class="_view data-v-6917acb2">
+      <view class="_view data-v-6917acb2 yonghu-list" wx:if="{{yonghuList.length > 0}}">
+        <view class="_view data-v-6917acb2 yonghu-num">有{{yonghuList.length}}位用户关注了你</view>
+        <view class="_view data-v-6917acb2 msg-list">
+          <view class="_view data-v-6917acb2 msg-item yonghu-item" wx:key="index" key="{{index}}" wx:for="{{yonghuList}}" wx:for-index="index" wx:for-item="i">
+            <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-6917acb2"></image>
+            <view class="_view data-v-6917acb2 msg-detail">
+              <view class="_view data-v-6917acb2 msg-title">我是谁</view>
+              <view class="_view data-v-6917acb2 msg-text">幽默影剧发布人</view>
             </view>
-            <view class="_view data-v-20567394 guanzhu-btn">
-              <image src="../../../static/images/common_del@3x.png" mode="widthFix" class="_image data-v-20567394"></image> 取关 </view>
+            <view class="_view data-v-6917acb2 guanzhu-btn">
+              <image src="../../../static/images/common_del@3x.png" mode="widthFix" class="_image data-v-6917acb2"></image> 取关 </view>
           </view>
         </view>
       </view>
-      <view class="_view data-v-20567394 no-yonghu" wx:else>
-        <view class="_view data-v-20567394 no-yonghu-text1">你还没有关注任何用户</view>
-        <view class="_view data-v-20567394 no-yonghu-text2">错过的精彩那么大</view>
+      <view class="_view data-v-6917acb2 no-yonghu" wx:else>
+        <view class="_view data-v-6917acb2 no-yonghu-text1">你还没有关注任何用户</view>
+        <view class="_view data-v-6917acb2 no-yonghu-text2">错过的精彩那么大</view>
       </view>
     </view>
   </view>

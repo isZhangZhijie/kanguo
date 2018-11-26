@@ -1,13 +1,13 @@
-<template name="b3bf0144">
-  <view class="_view data-v-2983d3b8 index">
-    <view class="_view data-v-2983d3b8">
-      <video src="http://vjs.zencdn.net/v/oceans.mp4" controls class="_video data-v-2983d3b8"></video>
+<template name="46acf9ba">
+  <view class="_view data-v-395a5628 index">
+    <view class="_view data-v-395a5628 video-box">
+      <video src="https://www.xitieba.com/video/new/YS_PCVedio.webm" controls class="_video data-v-395a5628"></video>
     </view>
-    <view id="tab-bar" class="_view data-v-2983d3b8 swiper-tab">
-      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'EeY-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-2983d3b8 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+    <view id="tab-bar" class="_view data-v-395a5628 swiper-tab">
+      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'c9Z-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-395a5628 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
     </view>
-    <swiper current="{{tabIndex}}" class="_swiper data-v-2983d3b8 swiper-box" duration="300" bindchange="handleProxy" data-eventid="{{'6np-1'}}" data-comkey="{{$k}}">
-      <swiper-item wx:key="index1" key="{{index1}}" wx:for="{{newsitems}}" wx:for-index="index1" wx:for-item="tab" class="_swiper-item data-v-2983d3b8"> {{tab}} </swiper-item>
+    <swiper current="{{tabIndex}}" class="_swiper data-v-395a5628 swiper-box" duration="300" bindchange="handleProxy" data-eventid="{{'Lep-1'}}" data-comkey="{{$k}}">
+      <swiper-item wx:key="index1" key="{{index1}}" wx:for="{{newsitems}}" wx:for-index="index1" wx:for-item="tab" class="_swiper-item data-v-395a5628"> {{tab}} </swiper-item>
     </swiper>
   </view>
 </template>

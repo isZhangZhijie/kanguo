@@ -1,37 +1,37 @@
-<template name="1e6080b5">
-  <view class="_view data-v-0b1ab9fc container">
-    <view class="_view data-v-0b1ab9fc page-body uni-content-info">
-      <view class="_view data-v-0b1ab9fc cropper-content">
-        <view wx:if="{{isShowImg}}" class="_view data-v-0b1ab9fc uni-corpper" style=" {{'width:' + cropperInitW + 'px;height:' + cropperInitH + 'px;background:#000'}}">
-          <view class="_view data-v-0b1ab9fc uni-corpper-content" style=" {{'width:' +  cropperW +  'px;height:' +  cropperH +  'px;left:' +  cropperL +  'px;top:' +  cropperT +  'px'}}">
-            <image src="{{imageSrc}}" class="_image data-v-0b1ab9fc" style=" {{'width:' + cropperW + 'px;height:' + cropperH + 'px'}}"></image>
-            <view class="_view data-v-0b1ab9fc uni-corpper-crop-box" catchtouchstart="handleProxy" catchtouchmove="handleProxy" catchtouchend="handleProxy" data-eventid="{{'lDS-9'}}" data-comkey="{{$k}}" style=" {{'left:' +  cutL +  'px;top:' +  cutT +  'px;right:' +  cutR +  'px;bottom:' +  cutB +  'px'}}">
-              <view class="_view data-v-0b1ab9fc uni-cropper-view-box">
-                <view class="_view data-v-0b1ab9fc uni-cropper-dashed-h"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-dashed-v"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-line-t" data-drag="top" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'vwF-0'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-line-r" data-drag="right" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'Pe7-1'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-line-b" data-drag="bottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'90w-2'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-line-l" data-drag="left" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'evT-3'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-t" data-drag="top" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'Tkb-4'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-tr" data-drag="topTight"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-r" data-drag="right" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'eiv-5'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-rb" data-drag="rightBottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'65p-6'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-b" data-drag="bottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" catchtouchend="handleProxy" data-eventid="{{'Afn-7'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-bl" data-drag="bottomLeft"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-l" data-drag="left" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'f5N-8'}}" data-comkey="{{$k}}"></view>
-                <view class="_view data-v-0b1ab9fc uni-cropper-point point-lt" data-drag="leftTop"></view>
+<template name="a6ba324e">
+  <view class="_view data-v-5f89a510 container">
+    <view class="_view data-v-5f89a510 page-body uni-content-info">
+      <view class="_view data-v-5f89a510 cropper-content">
+        <view wx:if="{{isShowImg}}" class="_view data-v-5f89a510 uni-corpper" style=" {{'width:' + cropperInitW + 'px;height:' + cropperInitH + 'px;background:#000'}}">
+          <view class="_view data-v-5f89a510 uni-corpper-content" style=" {{'width:' +  cropperW +  'px;height:' +  cropperH +  'px;left:' +  cropperL +  'px;top:' +  cropperT +  'px'}}">
+            <image src="{{imageSrc}}" class="_image data-v-5f89a510" style=" {{'width:' + cropperW + 'px;height:' + cropperH + 'px'}}"></image>
+            <view class="_view data-v-5f89a510 uni-corpper-crop-box" catchtouchstart="handleProxy" catchtouchmove="handleProxy" catchtouchend="handleProxy" data-eventid="{{'mJp-9'}}" data-comkey="{{$k}}" style=" {{'left:' +  cutL +  'px;top:' +  cutT +  'px;right:' +  cutR +  'px;bottom:' +  cutB +  'px'}}">
+              <view class="_view data-v-5f89a510 uni-cropper-view-box">
+                <view class="_view data-v-5f89a510 uni-cropper-dashed-h"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-dashed-v"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-line-t" data-drag="top" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'Q6n-0'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-line-r" data-drag="right" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'vpV-1'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-line-b" data-drag="bottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'Rpy-2'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-line-l" data-drag="left" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'dCf-3'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-t" data-drag="top" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'f4B-4'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-tr" data-drag="topTight"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-r" data-drag="right" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'ilv-5'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-rb" data-drag="rightBottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'TZb-6'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-b" data-drag="bottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" catchtouchend="handleProxy" data-eventid="{{'aWs-7'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-bl" data-drag="bottomLeft"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-l" data-drag="left" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'odS-8'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-lt" data-drag="leftTop"></view>
               </view>
             </view>
           </view>
         </view>
       </view>
-      <view class="_view data-v-0b1ab9fc cropper-config">
-        <button type="primary reverse" bindtap="handleProxy" style="margin-top: 30rpx;" data-eventid="{{'zSy-10'}}" data-comkey="{{$k}}" class="_button data-v-0b1ab9fc"> 选择图片 </button>
-        <button type="warn" bindtap="handleProxy" style="margin-top: 30rpx;" data-eventid="{{'PU7-11'}}" data-comkey="{{$k}}" class="_button data-v-0b1ab9fc"> 点击生成图片 </button>
+      <view class="_view data-v-5f89a510 cropper-config">
+        <button type="primary reverse" bindtap="handleProxy" style="margin-top: 30rpx;" data-eventid="{{'Phr-10'}}" data-comkey="{{$k}}" class="_button data-v-5f89a510"> 选择图片 </button>
+        <button type="warn" bindtap="handleProxy" style="margin-top: 30rpx;" data-eventid="{{'Et2-11'}}" data-comkey="{{$k}}" class="_button data-v-5f89a510"> 点击生成图片 </button>
       </view>
-      <canvas canvas-id="myCanvas" class="_canvas data-v-0b1ab9fc" style=" {{'position:absolute;border: 1px solid red; width:' +  imageW +  'px;height:' +  imageH +  'px;top:-9999px;left:-9999px;'}}"></canvas>
+      <canvas canvas-id="myCanvas" class="_canvas data-v-5f89a510" style=" {{'position:absolute;border: 1px solid red; width:' +  imageW +  'px;height:' +  imageH +  'px;top:-9999px;left:-9999px;'}}"></canvas>
     </view>
-    <page-foot name="{{name}}" class="_page-foot data-v-0b1ab9fc"></page-foot>
+    <page-foot name="{{name}}" class="_page-foot data-v-5f89a510"></page-foot>
   </view>
 </template>

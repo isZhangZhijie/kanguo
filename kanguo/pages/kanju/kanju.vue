@@ -1,7 +1,7 @@
 <template>
     <view class="index">
-		<view class="">
-			<video src="http://vjs.zencdn.net/v/oceans.mp4" controls></video>
+		<view class="video-box">
+			<video src="https://www.xitieba.com/video/new/YS_PCVedio.webm" controls></video>
 		</view>
         <view id="tab-bar" class="swiper-tab">
             <view v-for="(tab,index) in tabBars" :key="tab.id" :class="['swiper-tab-list',tabIndex==index ? 'active' : '']"
@@ -26,57 +26,6 @@
                 isClickChange: false,
                 tabIndex: 0,
                 newsitems: [123,456],
-                data0: {
-                    "datetime": "40分钟前",
-                    "article_type": 0,
-                    "title": "uni-app行业峰会频频亮相，开发者反响热烈!",
-                    "source": "DCloud",
-                    "comment_count": 639
-                },
-                data1: {
-                    "datetime": "一天前",
-                    "article_type": 1,
-                    "title": "DCloud完成B2轮融资，uni-app震撼发布!",
-                    "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg?imageView2/3/w/200/h/100/q/90",
-                    "source": "DCloud",
-                    "comment_count": 11395
-                },
-                data2: {
-                    "datetime": "一天前",
-                    "article_type": 2,
-                    "title": "中国技术界小奇迹：HBuilder开发者突破200万",
-                    "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg?imageView2/3/w/200/h/100/q/90",
-                    "source": "DCloud",
-                    "comment_count": 11395
-                },
-                data4: {
-                    "datetime": "2小时前",
-                    "article_type": 4,
-                    "title": "uni-app 支持原生小程序自定义组件，更开放、更自由",
-                    "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90",
-                    "source": "DCloud",
-                    "comment_count": 69
-                },
-                data3: {
-                    "article_type": 3,
-                    "image_list": [{
-                        "url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90",
-                        "width": 563,
-                        "height": 316
-                    }, {
-                        "url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg?imageView2/3/w/200/h/100/q/90",
-                        "width": 641,
-                        "height": 360
-                    }, {
-                        "url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg?imageView2/3/w/200/h/100/q/90",
-                        "width": 640,
-                        "height": 360
-                    }],
-                    "datetime": "5分钟前",
-                    "title": "uni-app 支持使用 npm 安装第三方包，生态更趋丰富",
-                    "source": "DCloud",
-                    "comment_count": 11
-                },
                 tabBars: [{
                     name: '短片',
                     id: 'guanzhu'
@@ -131,6 +80,7 @@
                 if (this.tabIndex === e.target.dataset.current) {
                     return false;
                 } else {
+					console.log(222)
                     let tabBar = await this.getElSize("tab-bar"),
                         tabBarScrollLeft = tabBar.scrollLeft; //点击的时候记录并设置scrollLeft
                     this.scrollLeft = tabBarScrollLeft;
@@ -147,6 +97,12 @@
         display: flex;
     }
 
+	.video-box {
+		margin-bottom: 0;
+	}
+	.video-box video {
+		display: block;
+	}
     .index {
         display: flex;
         flex: 1;

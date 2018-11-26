@@ -1,1 +1,1 @@
-<import src="/pages/wode/wodefensi/wodefensi.vue.wxml" /><template is="e4a16e16" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/wode/wodefensi/wodefensi.vue.wxml" /><template is="0e6d8419" data="{{ ...$root['0'], $root }}"/>

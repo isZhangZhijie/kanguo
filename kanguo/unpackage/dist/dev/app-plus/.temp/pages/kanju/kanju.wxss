@@ -5,6 +5,12 @@ page {
   display: -webkit-flex;
   display: flex;
 }
+.video-box {
+  margin-bottom: 0;
+}
+.video-box ._video {
+  display: block;
+}
 .index {
   display: -webkit-box;
   display: -webkit-flex;

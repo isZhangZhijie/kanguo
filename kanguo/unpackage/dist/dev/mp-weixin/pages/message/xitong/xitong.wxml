@@ -1,1 +1,1 @@
-<import src="/pages/message/xitong/xitong.vue.wxml" /><template is="5280f55b" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/message/xitong/xitong.vue.wxml" /><template is="336d2cb7" data="{{ ...$root['0'], $root }}"/>

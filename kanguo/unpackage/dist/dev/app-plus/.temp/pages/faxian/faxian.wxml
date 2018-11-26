@@ -1,1 +1,1 @@
-<import src="/pages/faxian/faxian.vue.wxml" /><template is="b7a50120" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/faxian/faxian.vue.wxml" /><template is="5384d2cc" data="{{ ...$root['0'], $root }}"/>

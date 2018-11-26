@@ -1,1 +1,1 @@
-<import src="/pages/login/login-wechat/login-wechat.vue.wxml" /><template is="78d1aec6" data="{{ ...$root['0'], $root }}"/>
+<import src="/pages/login/login-wechat/login-wechat.vue.wxml" /><template is="121adcf9" data="{{ ...$root['0'], $root }}"/>
