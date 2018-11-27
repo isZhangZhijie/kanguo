@@ -3,22 +3,22 @@
     <view class="_view data-v-43411a70 top-bar">
       <view class="_view data-v-43411a70 top-text">消息</view>
       <view class="_view data-v-43411a70 msg-type">
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'rMG-0'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'ooo-0'}}" data-comkey="{{$k}}">
           <image src="../../static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 粉丝 </view>
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'Cr2-1'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'syK-1'}}" data-comkey="{{$k}}">
           <image src="../../static/images/massage_button_dianzan@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 点赞
           <view class="_view data-v-43411a70 msg-num">5</view>
         </view>
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'eQb-2'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'kNt-2'}}" data-comkey="{{$k}}">
           <image src="../../static/images/massage_button_mine@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> @我的
           <view class="_view data-v-43411a70 msg-num">10</view>
         </view>
-        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'l2q-3'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-43411a70 type-item" bindtap="handleProxy" data-eventid="{{'auL-3'}}" data-comkey="{{$k}}">
           <image src="../../static/images/massage_button_pinglun@3x.png" mode="widthFix" class="_image data-v-43411a70"></image> 评论 </view>
       </view>
     </view>
     <view class="_view data-v-43411a70 msg-list">
-      <view class="_view data-v-43411a70 msg-item" bindtap="handleProxy" data-eventid="{{'aic-4'}}" data-comkey="{{$k}}">
+      <view class="_view data-v-43411a70 msg-item" bindtap="handleProxy" data-eventid="{{'SC4-4'}}" data-comkey="{{$k}}">
         <image src="../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-43411a70"></image>
         <view class="_view data-v-43411a70 msg-detail">
           <view class="_view data-v-43411a70 msg-title">

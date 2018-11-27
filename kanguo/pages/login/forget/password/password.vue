@@ -44,9 +44,9 @@
 			},
 			goIndex() {
 				console.log(123)
-				uni.navigateTo({
+				uni.switchTab({
 					url: '../../../index/index'
-				});
+				})
 			}
 		},
 		onLoad() {

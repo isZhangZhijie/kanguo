@@ -13,7 +13,7 @@
 			</view>
 		</view>
 		<view class="title">郭富城惊天演技，戏耍众人</view>
-		<video id="myVideo" src="http://vjs.zencdn.net/v/oceans.mp4" controls></video>
+		<video id="myVideo" poster="/static/images/poster.png" src="http://vjs.zencdn.net/v/oceans.mp4" controls></video>
 		
 		<view class="action-row">
 			<view class="love">
@@ -45,8 +45,8 @@
 <style>
 	video {
 		position: relative;
-		z-index: -10;
 		width: 100%;
+		height: 422upx;
 	}
 	.video-box {
 		margin-bottom: 20upx;

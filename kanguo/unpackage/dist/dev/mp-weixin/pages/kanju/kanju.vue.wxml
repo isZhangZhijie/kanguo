@@ -1,13 +1,138 @@
 <template name="46acf9ba">
   <view class="_view data-v-395a5628 index">
     <view class="_view data-v-395a5628 video-box">
-      <video src="https://www.xitieba.com/video/new/YS_PCVedio.webm" controls class="_video data-v-395a5628"></video>
+      <video src="https://www.xitieba.com/video/new/YS_PCVedio.webm" poster="/static/images/poster.png" controls class="_video data-v-395a5628">
+        <cover-image class="_cover-image data-v-395a5628 back" bindtap="handleProxy" src="/static/images/common_return2@3x.png" data-eventid="{{'5Si-0'}}" data-comkey="{{$k}}"></cover-image>
+      </video>
     </view>
-    <view id="tab-bar" class="_view data-v-395a5628 swiper-tab">
-      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'PoU-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-395a5628 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+    <view id="tab-bar" class="_view data-v-395a5628 swiper-tab-bar">
+      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'xaW-1-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-395a5628 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
     </view>
-    <swiper current="{{tabIndex}}" class="_swiper data-v-395a5628 swiper-box" duration="300" bindchange="handleProxy" data-eventid="{{'PPp-1'}}" data-comkey="{{$k}}">
-      <swiper-item wx:key="index1" key="{{index1}}" wx:for="{{newsitems}}" wx:for-index="index1" wx:for-item="tab" class="_swiper-item data-v-395a5628"> {{tab}} </swiper-item>
+    <swiper current="{{tabIndex}}" class="_swiper data-v-395a5628 swiper-box" duration="100" bindchange="handleProxy" data-eventid="{{'SUo-8'}}" data-comkey="{{$k}}">
+      <swiper-item class="_swiper-item data-v-395a5628">
+        <scroll-view scroll-y style="width:100%;height:100%" class="_scroll-view data-v-395a5628">
+          <view class="_view data-v-395a5628 author">
+            <view class="_view data-v-395a5628 author-about">
+              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              <text class="_text data-v-395a5628 name">剧情死忠粉</text>
+            </view>
+            <view class="_view data-v-395a5628 right"> +关注 </view>
+          </view>
+          <view class="_view data-v-395a5628 title"> 勇闯AK火力网，凌风一枪生擒毒枭 </view>
+          <view class="_view data-v-395a5628 action-row">
+            <view class="_view data-v-395a5628 love">
+              <image src="/static/images/common__button_dianzan0@3x.png" mode="widthFix" class="_image data-v-395a5628"></image> 2124 </view>
+            <view class="_view data-v-395a5628 share">
+              <image src="/static/images/common__button_fenxiang@3x.png" mode="widthFix" class="_image data-v-395a5628"></image> 320 </view>
+            <view class="_view data-v-395a5628 guanzhu">
+              <image src="/static/images/common__button_keep0@3x.png" mode="widthFix" class="_image data-v-395a5628"></image> 870 </view>
+            <view class="_view data-v-395a5628 download">
+              <image src="/static/images/common__button_download@3x.png" mode="widthFix" class="_image data-v-395a5628"></image> 下载 </view>
+          </view>
+          <view class="_view data-v-395a5628 dashed-line"></view>
+          <view class="_view data-v-395a5628 all-video">
+            <view class="_view data-v-395a5628 all-video-btn">
+              <view class="_view data-v-395a5628 img-box img-box-width100">
+                <image src="/static/images/juzhao.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              </view>
+              <view class="_view data-v-395a5628 text">
+                <view class="_view data-v-395a5628 title1 xtb-3dots"> 蚀日风暴风暴风暴 </view>
+                <view class="_view data-v-395a5628 arrow-right"> 全部视频
+                  <image src="/static/images/common__button_enter@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+                </view>
+              </view>
+            </view>
+            <view class="_view data-v-395a5628 other-way">
+              <image src="/static/images/aiqiyi@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              <image src="/static/images/youku@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              <image src="/static/images/tengxun@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+            </view>
+          </view>
+          <view class="_view data-v-395a5628 video-about-tab">
+            <text style="font-size: 16px;margin-right: 50rpx;" bindtap="handleProxy" data-eventid="{{'juX-2'}}" data-comkey="{{$k}}" class="_text data-v-395a5628 {{[showPianduan ? 'active' : '']}}">精彩片段</text>
+            <text style="font-size: 16px;" bindtap="handleProxy" data-eventid="{{'rfn-3'}}" data-comkey="{{$k}}" class="_text data-v-395a5628 {{[showPianduan ? '' : 'active']}}">分集剧情</text>
+          </view>
+          <view class="_view data-v-395a5628 pianduan" hidden="{{!(showPianduan)}}">
+            <scroll-view scroll-x class="_scroll-view data-v-395a5628 video-list">
+              <view class="_view data-v-395a5628 video-item" wx:key="index" key="{{index}}" wx:for="{{videoList}}" wx:for-index="index" wx:for-item="item">
+                <view class="_view data-v-395a5628 img-box img-box-width100">
+                  <image src="/static/images/juzhao.png" mode="widthFix" class="_image data-v-395a5628"></image>
+                  <view class="_view data-v-395a5628 shadow"></view>
+                  <text class="_text data-v-395a5628">热度：23W+</text>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+          <view class="_view data-v-395a5628 fenji" hidden="{{!(!showPianduan)}}"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+        </scroll-view>
+      </swiper-item>
+      <swiper-item class="_swiper-item data-v-395a5628">
+        <scroll-view scroll-y style="width:100%;height:100%" class="_scroll-view data-v-395a5628">
+          <view class="_view data-v-395a5628 comment-list">
+            <view class="_view data-v-395a5628 comment-item">
+              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              <view class="_view data-v-395a5628 comment-box">
+                <view class="_view data-v-395a5628 name">剧情死忠粉</view>
+                <view class="_view data-v-395a5628 main-comment"> 这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评 </view>
+                <view class="_view data-v-395a5628 reply-comment">
+                  <view class="_view data-v-395a5628 reply-item">
+                    <view class="_view data-v-395a5628 reply-name">@你猜我猜不猜</view>
+                    <view class="_view data-v-395a5628 reply-text">这是一条神评</view>
+                  </view>
+                  <view class="_view data-v-395a5628 reply-item">
+                    <view class="_view data-v-395a5628 reply-name">@啥名字</view>
+                    <view class="_view data-v-395a5628 reply-text">这是一条神评</view>
+                  </view>
+                </view>
+              </view>
+              <view class="_view data-v-395a5628 dianzan" bindtap="handleProxy" data-eventid="{{'jVu-4'}}" data-comkey="{{$k}}">
+                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-395a5628"></image> 361 </view>
+            </view>
+            <view class="_view data-v-395a5628 comment-item">
+              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              <view class="_view data-v-395a5628 comment-box">
+                <view class="_view data-v-395a5628 name">剧情死忠粉</view>
+                <view class="_view data-v-395a5628 main-comment"> 这是一条神评 </view>
+                <view class="_view data-v-395a5628 reply-comment">
+                  <view class="_view data-v-395a5628 reply-item">
+                    <view class="_view data-v-395a5628 reply-name">@你猜我猜不猜</view>
+                    <view class="_view data-v-395a5628 reply-text">这是一条神评</view>
+                  </view>
+                  <view class="_view data-v-395a5628 reply-item">
+                    <view class="_view data-v-395a5628 reply-name">@啥名字</view>
+                    <view class="_view data-v-395a5628 reply-text">这是一条神评</view>
+                  </view>
+                </view>
+              </view>
+              <view class="_view data-v-395a5628 dianzan" bindtap="handleProxy" data-eventid="{{'z8F-5'}}" data-comkey="{{$k}}">
+                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-395a5628"></image> 361 </view>
+            </view>
+            <view class="_view data-v-395a5628 comment-item">
+              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              <view class="_view data-v-395a5628 comment-box">
+                <view class="_view data-v-395a5628 name">剧情死忠粉</view>
+                <view class="_view data-v-395a5628 main-comment"> 这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评 </view>
+              </view>
+              <view class="_view data-v-395a5628 dianzan" bindtap="handleProxy" data-eventid="{{'ULS-6'}}" data-comkey="{{$k}}">
+                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-395a5628"></image> 361 </view>
+            </view>
+            <view class="_view data-v-395a5628 comment-item">
+              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+              <view class="_view data-v-395a5628 comment-box">
+                <view class="_view data-v-395a5628 name">剧情死忠粉</view>
+                <view class="_view data-v-395a5628 main-comment"> 这是一条神评 </view>
+              </view>
+              <view class="_view data-v-395a5628 dianzan" bindtap="handleProxy" data-eventid="{{'sXP-7'}}" data-comkey="{{$k}}">
+                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-395a5628"></image> 361 </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
     </swiper>
+    <view class="_view data-v-395a5628 ipt-box">
+      <textarea placeholder="来发条热门评论吧!" name="textarea" auto-height class="_textarea data-v-395a5628" />
+      <image src="/static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+      <image src="/static/images/common__button_fasong@3x.png" mode="widthFix" class="_image data-v-395a5628"></image>
+    </view>
   </view>
 </template>

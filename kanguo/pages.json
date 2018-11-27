@@ -165,6 +165,14 @@
         {
             "path" : "pages/kanju/kanju",
             "style" : {
+                "app-plus" : {
+                    "titleNView" : false // 单独此页面无顶部导航
+                }
+            }
+        },
+        {
+            "path" : "pages/yingjuzhuye/yingjuzhuye",
+            "style" : {
 				"app-plus" : {
 					"titleNView" : false // 单独此页面无顶部导航
 				}
@@ -173,7 +181,7 @@
     ],
     "condition" : {
         //模式配置，仅开发期间生效
-        "current" : 10, //当前激活的模式（list 的索引项）
+        "current" : 11, //当前激活的模式（list 的索引项）
         "list" : [
             {
                 "name" : "wodeguanzhu", //模式名称0
@@ -218,6 +226,10 @@
             {
                 "name" : "kanju", //模式名称10
                 "path" : "pages/kanju/kanju" //启动页面，必选
+            },
+            {
+                "name" : "yingjuzhuye", //模式名称11
+                "path" : "pages/yingjuzhuye/yingjuzhuye" //启动页面，必选
             }
         ]
     },
