@@ -2,94 +2,58 @@
 <template name="6179ae32">
   <view class="_view data-v-4a27a360 index">
     <view class="_view data-v-4a27a360 top-img-box">
-      <image src="/static/images/poster.png" mode="aspectFill" class="_image data-v-4a27a360"></image>
+      <image class="_image data-v-4a27a360 poster" src="/static/images/poster.png" mode="aspectFill"></image>
       <view class="_view data-v-4a27a360 video-detail">
         <view class="_view data-v-4a27a360 video-title">蚀日风暴</view>
         <view class="_view data-v-4a27a360 text">共36集</view>
         <view class="_view data-v-4a27a360 text">1618个视频</view>
         <view class="_view data-v-4a27a360 guanzhu">+关注</view>
       </view>
+      <image bindtap="handleProxy" class="_image data-v-4a27a360 back" src="/static/images/common_return@3x.png" mode="widthFix" data-eventid="{{'Uek-0'}}" data-comkey="{{$k}}"></image>
     </view>
     <view id="tab-bar" class="_view data-v-4a27a360 swiper-tab-bar">
-      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'7K4-0-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'tdI-1-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
     </view>
-    <swiper current="{{tabIndex}}" class="_swiper data-v-4a27a360 swiper-box" duration="100" bindchange="handleProxy" data-eventid="{{'m5O-7'}}" data-comkey="{{$k}}">
-      <swiper-item class="_swiper-item data-v-4a27a360">
-        <scroll-view scroll-y style="width:100%;height:100%" class="_scroll-view data-v-4a27a360">
-          <view class="_view data-v-4a27a360 video-about-tab">
-            <text style="font-size: 16px;margin-right: 50rpx;" bindtap="handleProxy" data-eventid="{{'NMQ-1'}}" data-comkey="{{$k}}" class="_text data-v-4a27a360 {{[showPianduan ? 'active' : '']}}">精彩片段</text>
-            <text style="font-size: 16px;" bindtap="handleProxy" data-eventid="{{'SyY-2'}}" data-comkey="{{$k}}" class="_text data-v-4a27a360 {{[showPianduan ? '' : 'active']}}">分集剧情</text>
-          </view>
-          <view class="_view data-v-4a27a360 pianduan" hidden="{{!(showPianduan)}}">
-            <view class="_view data-v-4a27a360 video-list">
-              <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'tlF-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
-            </view>
-          </view>
-          <view class="_view data-v-4a27a360 fenji" hidden="{{!(!showPianduan)}}"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+    <view class="_view data-v-4a27a360 pianduan" hidden="{{!(tabIndex == 0)}}">
+      <view class="_view data-v-4a27a360 video-about-tab">
+        <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'So6-2-'+index}}" data-comkey="{{$k}}" wx:for="{{sortTabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortTabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+      </view>
+      <view class="_view data-v-4a27a360 anjishu" hidden="{{!(sortTabIndex == 0)}}">
+        <scroll-view scroll-x class="_scroll-view data-v-4a27a360 sort-jishu">
+          <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'08J-3-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJishuBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJishuIndex == index ? 'active' : '']}}">{{tab}}</view>
         </scroll-view>
-      </swiper-item>
-      <swiper-item class="_swiper-item data-v-4a27a360">
-        <scroll-view scroll-y style="width:100%;height:100%" class="_scroll-view data-v-4a27a360">
-          <view class="_view data-v-4a27a360 comment-list">
-            <view class="_view data-v-4a27a360 comment-item">
-              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-4a27a360"></image>
-              <view class="_view data-v-4a27a360 comment-box">
-                <view class="_view data-v-4a27a360 name">剧情死忠粉</view>
-                <view class="_view data-v-4a27a360 main-comment"> 这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评 </view>
-                <view class="_view data-v-4a27a360 reply-comment">
-                  <view class="_view data-v-4a27a360 reply-item">
-                    <view class="_view data-v-4a27a360 reply-name">@你猜我猜不猜</view>
-                    <view class="_view data-v-4a27a360 reply-text">这是一条神评</view>
-                  </view>
-                  <view class="_view data-v-4a27a360 reply-item">
-                    <view class="_view data-v-4a27a360 reply-name">@啥名字</view>
-                    <view class="_view data-v-4a27a360 reply-text">这是一条神评</view>
-                  </view>
-                </view>
-              </view>
-              <view class="_view data-v-4a27a360 dianzan" bindtap="handleProxy" data-eventid="{{'kuN-3'}}" data-comkey="{{$k}}">
-                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-4a27a360"></image> 361 </view>
-            </view>
-            <view class="_view data-v-4a27a360 comment-item">
-              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-4a27a360"></image>
-              <view class="_view data-v-4a27a360 comment-box">
-                <view class="_view data-v-4a27a360 name">剧情死忠粉</view>
-                <view class="_view data-v-4a27a360 main-comment"> 这是一条神评 </view>
-                <view class="_view data-v-4a27a360 reply-comment">
-                  <view class="_view data-v-4a27a360 reply-item">
-                    <view class="_view data-v-4a27a360 reply-name">@你猜我猜不猜</view>
-                    <view class="_view data-v-4a27a360 reply-text">这是一条神评</view>
-                  </view>
-                  <view class="_view data-v-4a27a360 reply-item">
-                    <view class="_view data-v-4a27a360 reply-name">@啥名字</view>
-                    <view class="_view data-v-4a27a360 reply-text">这是一条神评</view>
-                  </view>
-                </view>
-              </view>
-              <view class="_view data-v-4a27a360 dianzan" bindtap="handleProxy" data-eventid="{{'6J8-4'}}" data-comkey="{{$k}}">
-                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-4a27a360"></image> 361 </view>
-            </view>
-            <view class="_view data-v-4a27a360 comment-item">
-              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-4a27a360"></image>
-              <view class="_view data-v-4a27a360 comment-box">
-                <view class="_view data-v-4a27a360 name">剧情死忠粉</view>
-                <view class="_view data-v-4a27a360 main-comment"> 这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评这是一条神评 </view>
-              </view>
-              <view class="_view data-v-4a27a360 dianzan" bindtap="handleProxy" data-eventid="{{'AqS-5'}}" data-comkey="{{$k}}">
-                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-4a27a360"></image> 361 </view>
-            </view>
-            <view class="_view data-v-4a27a360 comment-item">
-              <image src="/static/images/massage_button_fensi@3x.png" mode="widthFix" class="_image data-v-4a27a360"></image>
-              <view class="_view data-v-4a27a360 comment-box">
-                <view class="_view data-v-4a27a360 name">剧情死忠粉</view>
-                <view class="_view data-v-4a27a360 main-comment"> 这是一条神评 </view>
-              </view>
-              <view class="_view data-v-4a27a360 dianzan" bindtap="handleProxy" data-eventid="{{'eec-6'}}" data-comkey="{{$k}}">
-                <image src="/static/images/dianzan0.png" mode="widthFix" class="_image data-v-4a27a360"></image> 361 </view>
-            </view>
-          </view>
-        </scroll-view>
-      </swiper-item>
-    </swiper>
+        <view class="_view data-v-4a27a360 video-list">
+          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'OSv-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+        </view>
+      </view>
+      <view class="_view data-v-4a27a360 anrenqi" hidden="{{!(sortTabIndex == 1)}}">
+        <view class="_view data-v-4a27a360 video-list">
+          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'5aQ-1-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+        </view>
+      </view>
+      <view class="_view data-v-4a27a360 anbofangliang" hidden="{{!(sortTabIndex == 2)}}"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+    </view>
+    <view class="_view data-v-4a27a360 juqing" hidden="{{!(tabIndex == 1)}}">
+      <scroll-view scroll-x class="_scroll-view data-v-4a27a360 sort-jishu">
+        <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'AEM-4-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJuqingBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJuqingIndex == index ? 'active' : '']}}">{{tab}}</view>
+      </scroll-view>
+      <view class="_view data-v-4a27a360 juqing-list">
+        <view class="_view data-v-4a27a360 juqing-item">
+          <view class="_view data-v-4a27a360 title">第
+            <text class="_text data-v-4a27a360">1</text>集</view>
+          <view class="_view data-v-4a27a360 text"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+        </view>
+        <view class="_view data-v-4a27a360 juqing-item">
+          <view class="_view data-v-4a27a360 title">第
+            <text class="_text data-v-4a27a360">2</text>集</view>
+          <view class="_view data-v-4a27a360 text"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+        </view>
+        <view class="_view data-v-4a27a360 juqing-item">
+          <view class="_view data-v-4a27a360 title">第
+            <text class="_text data-v-4a27a360">3</text>集</view>
+          <view class="_view data-v-4a27a360 text"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>

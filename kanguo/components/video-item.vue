@@ -13,7 +13,7 @@
 			</view>
 		</view>
 		<view class="title">郭富城惊天演技，戏耍众人</view>
-		<video id="myVideo" poster="/static/images/poster.png" src="http://vjs.zencdn.net/v/oceans.mp4" controls></video>
+		<video id="myVideo" poster="/static/images/poster.png" src="https://www.xitieba.com/video/new/YS_PCVedio.webm" controls></video>
 		
 		<view class="action-row">
 			<view class="love">

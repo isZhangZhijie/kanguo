@@ -47,7 +47,7 @@
 					<view class="dashed-line"></view>
 					
 					<view class="all-video">
-						<view class="all-video-btn">
+						<view class="all-video-btn" @tap="goYingjuzhuye">
 							<view class="img-box img-box-width100">
 								<image src="/static/images/juzhao.png" mode="widthFix"></image>
 							</view>
@@ -236,6 +236,11 @@
 			},
 			dianzan(e) {
 				console.log(e)
+			},
+			goYingjuzhuye() {
+				uni.navigateTo({
+					url: '../yingjuzhuye/yingjuzhuye'
+				});
 			}
         }
     }
