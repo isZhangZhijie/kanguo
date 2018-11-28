@@ -2,7 +2,7 @@
 <template name="6e06dcf1">
   <view class="_view data-v-c113ea6c">
     <view class="_view data-v-c113ea6c video-list">
-      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'lv9-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'gsj-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
     </view>
   </view>
 </template>

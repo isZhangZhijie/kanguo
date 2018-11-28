@@ -2,7 +2,7 @@
   <view class="_view data-v-263ffa78 shezhi">
     <view class="_view data-v-263ffa78 active-row">
       <text class="_text data-v-263ffa78">移动流量下视频自动播放</text>
-      <switch bindchange="handleProxy" color="#feda46" data-eventid="{{'mrN-0'}}" data-comkey="{{$k}}" class="_switch data-v-263ffa78" />
+      <switch bindchange="handleProxy" color="#feda46" data-eventid="{{'p6p-0'}}" data-comkey="{{$k}}" class="_switch data-v-263ffa78" />
     </view>
     <view class="_view data-v-263ffa78 active-row">
       <text class="_text data-v-263ffa78">清除缓存</text>

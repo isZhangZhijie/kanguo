@@ -48,7 +48,7 @@
 		/* left: 0; */
 		width: 100%;
 		background: #fff;
-		box-shadow: 0 10upx 10upx rgba(0,0,0,.2);
+		box-shadow: 0 0 10upx rgba(0,0,0,.2);
 	}
 	.search-btn {
 		position: absolute;
