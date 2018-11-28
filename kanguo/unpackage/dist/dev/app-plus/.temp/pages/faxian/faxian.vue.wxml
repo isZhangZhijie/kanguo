@@ -4,7 +4,7 @@
       <view class="_view data-v-7e537180 search-box">
         <view class="_view data-v-7e537180 search-btn">
           <image src="../../static/images/massge_button_find@3x.png" mode="widthFix" class="_image data-v-7e537180"></image> 搜你想看 </view>
-        <view class="_view data-v-7e537180 view-history" bindtap="handleProxy" data-eventid="{{'jtE-0'}}" data-comkey="{{$k}}">
+        <view class="_view data-v-7e537180 view-history" bindtap="handleProxy" data-eventid="{{'hPI-0'}}" data-comkey="{{$k}}">
           <image src="../../static/images/massge_button_visited@3x.png" mode="widthFix" class="_image data-v-7e537180"></image> 记录 </view>
       </view>
       <view class="_view data-v-7e537180 sel-box">
@@ -14,7 +14,7 @@
       </view>
     </view>
     <view class="_view data-v-7e537180 img-list">
-      <view class="_view data-v-7e537180 img-item xtb-3dots" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'CMR-1-'+index}}" data-comkey="{{$k}}" wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:for-index="index" wx:for-item="imgItem">
+      <view class="_view data-v-7e537180 img-item xtb-3dots" wx:key="index" key="{{index}}" bindtap="handleProxy" data-eventid="{{'nqe-1-'+index}}" data-comkey="{{$k}}" wx:for="{{[1,2,3,4,5,6,7,8,9,10]}}" wx:for-index="index" wx:for-item="imgItem">
         <image src="../../static/images/juzhao.png" mode="widthFix" class="_image data-v-7e537180"></image> 极速青春 </view>
     </view>
   </view>
