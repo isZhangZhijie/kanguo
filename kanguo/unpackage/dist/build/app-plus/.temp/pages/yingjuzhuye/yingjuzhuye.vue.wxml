@@ -1,0 +1,59 @@
+<import src="/components/video-item.vue.wxml" />
+<template name="6179ae32">
+  <view class="_view data-v-4a27a360 index">
+    <view class="_view data-v-4a27a360 top-img-box">
+      <image class="_image data-v-4a27a360 poster" src="/static/images/poster.png" mode="aspectFill"></image>
+      <view class="_view data-v-4a27a360 video-detail">
+        <view class="_view data-v-4a27a360 video-title">蚀日风暴</view>
+        <view class="_view data-v-4a27a360 text">共36集</view>
+        <view class="_view data-v-4a27a360 text">1618个视频</view>
+        <view class="_view data-v-4a27a360 guanzhu">+关注</view>
+      </view>
+      <image bindtap="handleProxy" class="_image data-v-4a27a360 back" src="/static/images/common_return@3x.png" mode="widthFix" data-eventid="{{'N9c-0'}}" data-comkey="{{$k}}"></image>
+    </view>
+    <view id="tab-bar" class="_view data-v-4a27a360 swiper-tab-bar">
+      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'JVV-1-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+    </view>
+    <view class="_view data-v-4a27a360 pianduan" hidden="{{!(tabIndex == 0)}}">
+      <view class="_view data-v-4a27a360 video-about-tab">
+        <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'BZr-2-'+index}}" data-comkey="{{$k}}" wx:for="{{sortTabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortTabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+      </view>
+      <view class="_view data-v-4a27a360 anjishu" hidden="{{!(sortTabIndex == 0)}}">
+        <scroll-view scroll-x class="_scroll-view data-v-4a27a360 sort-jishu">
+          <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'tLC-3-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJishuBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJishuIndex == index ? 'active' : '']}}">{{tab}}</view>
+        </scroll-view>
+        <view class="_view data-v-4a27a360 video-list">
+          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'p50-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+        </view>
+      </view>
+      <view class="_view data-v-4a27a360 anrenqi" hidden="{{!(sortTabIndex == 1)}}">
+        <view class="_view data-v-4a27a360 video-list">
+          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'g52-1-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+        </view>
+      </view>
+      <view class="_view data-v-4a27a360 anbofangliang" hidden="{{!(sortTabIndex == 2)}}"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+    </view>
+    <view class="_view data-v-4a27a360 juqing" hidden="{{!(tabIndex == 1)}}">
+      <scroll-view scroll-x class="_scroll-view data-v-4a27a360 sort-jishu">
+        <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'1qC-4-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJuqingBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJuqingIndex == index ? 'active' : '']}}">{{tab}}</view>
+      </scroll-view>
+      <view class="_view data-v-4a27a360 juqing-list">
+        <view class="_view data-v-4a27a360 juqing-item">
+          <view class="_view data-v-4a27a360 title">第
+            <text class="_text data-v-4a27a360">1</text>集</view>
+          <view class="_view data-v-4a27a360 text"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+        </view>
+        <view class="_view data-v-4a27a360 juqing-item">
+          <view class="_view data-v-4a27a360 title">第
+            <text class="_text data-v-4a27a360">2</text>集</view>
+          <view class="_view data-v-4a27a360 text"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+        </view>
+        <view class="_view data-v-4a27a360 juqing-item">
+          <view class="_view data-v-4a27a360 title">第
+            <text class="_text data-v-4a27a360">3</text>集</view>
+          <view class="_view data-v-4a27a360 text"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -85,7 +85,7 @@
                     name: '关注',
                     id: 'guanzhu'
                 }, {
-                    name: '推荐',
+                    name: '推荐vue',
                     id: 'tuijian'
                 }, {
                     name: '体育',

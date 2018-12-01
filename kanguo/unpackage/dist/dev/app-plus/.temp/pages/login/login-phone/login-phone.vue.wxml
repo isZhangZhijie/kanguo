@@ -9,15 +9,15 @@
       </view>
       <view class="_view data-v-6ffd8d90 login-input phone-num">
         <image src="../../../static/images/login_signPhone@3x.png" mode="aspectFit" class="_image data-v-6ffd8d90"></image>
-        <input type="number" focus="true" value="{{inputClearValue}}" bindinput="handleProxy" placeholder="请输入手机号码" data-eventid="{{'ijd-0'}}" data-comkey="{{$k}}" class="_input data-v-6ffd8d90" />
-        <view class="_view data-v-6ffd8d90 uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'0jk-1'}}" data-comkey="{{$k}}"></view>
+        <input type="number" focus="true" value="{{inputClearValue}}" bindinput="handleProxy" placeholder="请输入手机号码" data-eventid="{{'sCq-0'}}" data-comkey="{{$k}}" class="_input data-v-6ffd8d90" />
+        <view class="_view data-v-6ffd8d90 uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'dqk-1'}}" data-comkey="{{$k}}"></view>
       </view>
       <view class="_view data-v-6ffd8d90 login-input phone-password">
         <image src="../../../static/images/login_signLock@3x.png" mode="aspectFit" class="_image data-v-6ffd8d90"></image>
-        <input value="{{password}}" placeholder="请输入登录密码" bindinput="handleProxy" password="{{showPassword}}" data-eventid="{{'TXx-2'}}" data-comkey="{{$k}}" class="_input data-v-6ffd8d90" />
-        <view class="_view data-v-6ffd8d90 uni-icon uni-icon-eye {{[!showPassword ? 'uni-active' : '']}}" bindtap="handleProxy" data-eventid="{{'DO5-3'}}" data-comkey="{{$k}}"></view>
+        <input value="{{password}}" placeholder="请输入登录密码" bindinput="handleProxy" password="{{showPassword}}" data-eventid="{{'Uom-2'}}" data-comkey="{{$k}}" class="_input data-v-6ffd8d90" />
+        <view class="_view data-v-6ffd8d90 uni-icon uni-icon-eye {{[!showPassword ? 'uni-active' : '']}}" bindtap="handleProxy" data-eventid="{{'FXY-3'}}" data-comkey="{{$k}}"></view>
       </view>
-      <view class="_view data-v-6ffd8d90 login-btn" bindtap="handleProxy" data-eventid="{{'SMB-4'}}" data-comkey="{{$k}}">登 录</view>
+      <view class="_view data-v-6ffd8d90 login-btn" bindtap="handleProxy" data-eventid="{{'hnM-4'}}" data-comkey="{{$k}}">登 录</view>
       <view class="_view data-v-6ffd8d90 action-row">
         <navigator url="../../reg/phone/phone" hover-class="none" class="_navigator data-v-6ffd8d90"> 快速注册 </navigator>
         <navigator url="../forget/phone/phone" hover-class="none" class="_navigator data-v-6ffd8d90"> 忘记密码 </navigator>
@@ -26,7 +26,7 @@
     <view class="_view data-v-6ffd8d90 other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
       <text class="_text data-v-6ffd8d90">其他方式登录</text>
       <view class="_view data-v-6ffd8d90 other-way-list">
-        <image bindtap="handleProxy" class="_image data-v-6ffd8d90 other-login" src="../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'kkR-5'}}" data-comkey="{{$k}}"></image>
+        <image bindtap="handleProxy" class="_image data-v-6ffd8d90 other-login" src="../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'UtA-5'}}" data-comkey="{{$k}}"></image>
       </view>
     </view>
   </view>

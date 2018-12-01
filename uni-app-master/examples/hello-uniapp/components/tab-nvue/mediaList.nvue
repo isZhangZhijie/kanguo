@@ -14,7 +14,7 @@
                 <div class="media-foot">
                     <div class="media-info">
                         <text class="info-text">{{data.source}}</text>
-                        <text class="info-text">{{data.comment_count}}条评论</text>
+                        <text class="info-text">{{data.comment_count}}条评论11</text>
                         <text class="info-text">{{data.datetime}}</text>
                     </div>
                     <div class="max-close-view" @click="close">
@@ -60,6 +60,12 @@
 </script>
 
 <style>
+	.video {
+		width: 630px;
+		height: 350px;
+		margin-top: 60px;
+		margin-left: 60px;
+	}
     .list-cell {
         width: 750px;
         padding: 0 30px;

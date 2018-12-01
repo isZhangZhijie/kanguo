@@ -1,0 +1,51 @@
+<template name="2c584932">
+  <view class="_view data-v-0296cec0 page">
+    <view class="_view data-v-0296cec0 header">
+      <view class="_view data-v-0296cec0 statusBar" style=" {{('height:' + (statusBarHeight + 'px') + ';')}}"></view>
+      <view class="_view data-v-0296cec0 info">
+        <text style="font-size: 16px;margin-right: 50rpx;" bindtap="handleProxy" data-eventid="{{'jGR-0'}}" data-comkey="{{$k}}" class="_text data-v-0296cec0 {{[showYonghu ? 'active' : '']}}">用户</text>
+        <text style="font-size: 16px;" bindtap="handleProxy" data-eventid="{{'dpR-1'}}" data-comkey="{{$k}}" class="_text data-v-0296cec0 {{[showYonghu ? '' : 'active']}}">影剧</text>
+        <image src="../../../static/images/common_return@3x.png" mode="widthFix" class="_image data-v-0296cec0 go-wode" bindtap="handleProxy" data-eventid="{{'dbD-2'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+    <view class="_view data-v-0296cec0" hidden="{{!(showYonghu)}}">
+      <view class="_view data-v-0296cec0 yonghu-list" wx:if="{{yonghuList.length > 0}}">
+        <view class="_view data-v-0296cec0 yonghu-num">您关注了{{yonghuList.length}}位用户</view>
+        <view class="_view data-v-0296cec0 msg-list">
+          <view class="_view data-v-0296cec0 msg-item yonghu-item" wx:key="index" key="{{index}}" wx:for="{{yonghuList}}" wx:for-index="index" wx:for-item="i">
+            <image src="../../../static/images/common__button_emoj@3x.png" mode="widthFix" class="_image data-v-0296cec0"></image>
+            <view class="_view data-v-0296cec0 msg-detail">
+              <view class="_view data-v-0296cec0 msg-title">我是谁</view>
+              <view class="_view data-v-0296cec0 msg-text">幽默影剧发布人</view>
+            </view>
+            <view class="_view data-v-0296cec0 guanzhu-btn">
+              <image src="../../../static/images/common_del@3x.png" mode="widthFix" class="_image data-v-0296cec0"></image> 取关 </view>
+          </view>
+        </view>
+      </view>
+      <view class="_view data-v-0296cec0 no-yonghu" wx:else>
+        <view class="_view data-v-0296cec0 no-yonghu-text1">你还没有关注任何用户</view>
+        <view class="_view data-v-0296cec0 no-yonghu-text2">错过的精彩那么大</view>
+      </view>
+    </view>
+    <view class="_view data-v-0296cec0" hidden="{{!(!showYonghu)}}">
+      <view class="_view data-v-0296cec0 yonghu-list" wx:if="{{yingjuList.length > 0}}">
+        <view class="_view data-v-0296cec0 msg-list">
+          <view class="_view data-v-0296cec0 msg-item yingju-item" wx:key="index" key="{{index}}" wx:for="{{yonghuList}}" wx:for-index="index" wx:for-item="i">
+            <image class="_image data-v-0296cec0" src="../../../static/images/juzhao.png" mode="widthFix"></image>
+            <view class="_view data-v-0296cec0 msg-detail">
+              <view class="_view data-v-0296cec0 msg-title">蚀日风暴</view>
+              <view class="_view data-v-0296cec0 msg-text">1234精彩影评</view>
+            </view>
+            <view class="_view data-v-0296cec0 guanzhu-btn">
+              <image src="../../../static/images/common_del@3x.png" mode="widthFix" class="_image data-v-0296cec0"></image> 关注 </view>
+          </view>
+        </view>
+      </view>
+      <view class="_view data-v-0296cec0 no-yonghu" wx:else>
+        <view class="_view data-v-0296cec0 no-yonghu-text1">你还没有关注任何影剧</view>
+        <view class="_view data-v-0296cec0 no-yonghu-text2">错过的精彩那么大</view>
+      </view>
+    </view>
+  </view>
+</template>

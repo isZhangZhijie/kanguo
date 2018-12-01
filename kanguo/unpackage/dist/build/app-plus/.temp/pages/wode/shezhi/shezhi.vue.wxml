@@ -1,0 +1,14 @@
+<template name="02a7b3d9">
+  <view class="_view data-v-263ffa78 shezhi">
+    <view class="_view data-v-263ffa78 active-row">
+      <text class="_text data-v-263ffa78">移动流量下视频自动播放</text>
+      <switch bindchange="handleProxy" color="#feda46" data-eventid="{{'xB3-0'}}" data-comkey="{{$k}}" class="_switch data-v-263ffa78" />
+    </view>
+    <view class="_view data-v-263ffa78 active-row">
+      <text class="_text data-v-263ffa78">清除缓存</text>
+      <view class="_view data-v-263ffa78 right"> 3.7M
+        <image class="_image data-v-263ffa78 arrow-right" src="../../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
+      </view>
+    </view>
+  </view>
+</template>
