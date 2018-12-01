@@ -1,8 +1,9 @@
 <template>
 	<view class="container">
+		<image class="back" src="/static/images/common_return@3x.png" mode="widthFix" @tap="goBack"></image>
 		<view class="login-page-top">
 			<image class="logo" src="../../../static/images/login_touxiang_defaul@3x.png"></image>
-			<view class="login-btn">微信登录</view>
+			<view class="login-btn" @tap="bindLogin">微信登录</view>
 		</view>
 		<view class="other-login-way" v-bind:style="{top: positionTop + 'px'}">
 			<text>其他方式登录</text>
@@ -33,6 +34,69 @@
 				*/
 				this.positionTop = uni.getSystemInfoSync().windowHeight - 70;
 			},
+			goBack() {
+				uni.switchTab({
+					url: '../../index/index'
+				});
+			},
+			bindLogin() {
+				// console.log(res.provider)
+				uni.login({
+					provider: 'weixin',
+					success: function (loginRes) {
+						// console.log(JSON.stringify(loginRes.authResult));
+						// 获取用户信息
+						uni.getUserInfo({
+						    provider: 'weixin',
+						    success: function (infoRes) {
+								// console.log(JSON.stringify(infoRes.userInfo));
+								uni.request({
+									url: 'http://www.aikm.cn/api/login',
+									data: {
+										judge: 2,
+										unionid: infoRes.userInfo.unionId,
+										app_open_id: infoRes.userInfo.openId,
+										nickname: infoRes.userInfo.nickName,
+										head_img: infoRes.userInfo.avatarUrl,
+										type: 'android',
+										sex: infoRes.userInfo.gender
+									},
+									method: 'POST',
+									success: (res) => {
+										// console.log(res);
+										// console.log(JSON.stringify(res.data));
+										// this.text = 'request success';
+// 										var loginData = {
+// 											hasLogin: true,
+// 											userData: res.data.data
+// 										}
+										if(res.data.code == 1) {
+											uni.setStorage({
+												key: 'userData',
+												data: res.data.data,
+												success: function () {
+													console.log('success');
+												}
+											});
+											uni.setStorage({
+												key: 'hasLogin',
+												data: true,
+												success: function () {
+													console.log('success');
+												}
+											});
+											uni.switchTab({
+												url: '../../index/index',
+											});
+										}
+									}
+								});
+						    }
+						});
+						
+					}
+				});
+			}
 		},
 		onLoad() {
 			this.initPosition();
@@ -42,9 +106,17 @@
 
 <style>
 	.container {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+	.back {
+		position: absolute;
+		width: 40upx;
+		height: 40upx;
+		top: 50upx;
+		left: 40upx; 
 	}
 	.logo {
 		width: 279upx;

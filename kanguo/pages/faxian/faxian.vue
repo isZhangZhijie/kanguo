@@ -106,7 +106,7 @@
 	}
 	.sel-box {
 		/* padding: 0 40upx; */
-		font-size: 38upx;
+		font-size: 32upx;
 		color: #363636;
 	}
 	.sel-row {

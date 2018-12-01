@@ -9,17 +9,17 @@
 			</view>
 			<view class="login-input phone-num">
 				<image src="../../../static/images/login_signPhone@3x.png" mode="aspectFit"></image>
-				<input type="number" focus=true value="" placeholder="请输入手机号码" :value="inputClearValue" @input="bindClearInput" />
+				<input type="number" focus=true value="" v-model="phone" placeholder="请输入手机号码" :value="inputClearValue" @input="bindClearInput" />
 				<view class="uni-icon uni-icon-clear" v-if="showClearIcon" @click="clearIcon"></view>
 			</view>
 			<view class="login-input phone-password">
 				<image src="../../../static/images/login_signLock@3x.png" mode="aspectFit"></image>
-				<input value="" placeholder="请输入登录密码" :password="showPassword" />
+				<input value="" placeholder="请输入登录密码" v-model="password" :password="showPassword" />
 				<view class="uni-icon uni-icon-eye" :class="[!showPassword ? 'uni-active' : '']" @click="changePassword"></view>
 			</view>
-			<view class="login-btn">登&nbsp;录</view>
+			<view class="login-btn" @tap="login">登&nbsp;录</view>
 			<view class="action-row">
-				<navigator url="" hover-class="none">
+				<navigator url="../../reg/phone/phone" hover-class="none">
                     快速注册
                 </navigator>
                 <navigator url="../forget/phone/phone" hover-class="none">
@@ -40,6 +40,8 @@
 	export default {
 		data() {
 			return {
+				phone: '',
+				password: '',
 				positionTop: 0,
 				showClearIcon: false,
 				inputClearValue: "",
@@ -73,6 +75,53 @@
 			},
 			changePassword: function () {
 				this.showPassword = !this.showPassword;
+			},
+			login() {
+				var _this = this
+				console.log(this.phone)
+				console.log(this.password)
+				uni.request({
+					url: 'http://www.aikm.cn/api/login',
+					method: 'POST',
+					data: {
+						judge: 1,
+						phone: _this.phone,
+						password: _this.password
+					},
+					success: res => {
+						if(res.data.code == 1) {
+							if(!res.data.data.head_img) {
+								res.data.data.head_img = '/static/images/head_img.png'
+							}
+							console.log(JSON.stringify(res.data))
+							uni.setStorage({
+								key: 'userData',
+								data: res.data.data,
+								success: function () {
+									// console.log('success');
+								}
+							});
+							uni.setStorage({
+								key: 'hasLogin',
+								data: true,
+								success: function () {
+									// console.log('success');
+								}
+							});
+							uni.switchTab({
+								url: '../../index/index',
+							});
+						} else {
+							uni.showToast({
+								title: res.data.msg,
+								duration: 2000,
+								icon: 'none',
+							});
+						}
+					},
+					fail: () => {},
+					complete: () => {}
+				});
 			}
 		},
 		onLoad() {

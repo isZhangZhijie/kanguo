@@ -1,5 +1,43 @@
 @import "../../common/vendor.wxss";
 
+.no-login {
+  display: none;
+}
+.no-login-show {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding-top: 160rpx;
+}
+.no-login-img {
+  width: 400rpx;
+  margin-bottom: 40rpx;
+}
+.no-login-text {
+  margin-bottom: 40rpx;
+  font-size: 32rpx;
+  color: #c9c9c9;
+}
+.login-btn {
+  width: 260rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #363636;
+  background: #feda46;
+}
+.wode {
+  height: 100%;
+  background: #fff;
+}
 .top-bg {
   width: 100%;
   display: block;
@@ -10,12 +48,12 @@
   background: #fff;
 }
 .user-row {
-  margin-bottom: 15rpx;
+  border-bottom: 15rpx solid #f3f3f3;
 }
 .avatar {
   padding-left: 160rpx;
   margin-bottom: 20rpx;
-  font-size: 34rpx;
+  font-size: 32rpx;
   color: #9c9c9c;
 }
 .avatar image {
@@ -26,13 +64,13 @@
   border-radius: 50%;
 }
 .name {
-  font-size: 42rpx;
+  font-size: 38rpx;
   color: #363636;
   font-weight: bold;
 }
 .arrow-right {
   position: absolute;
-  width: 26rpx;
+  width: 22rpx;
   right: 40rpx;
   top: 0;
   bottom: 0;
@@ -47,7 +85,7 @@
   -webkit-box-align: center;
   -webkit-align-items: center;
   align-items: center;
-  margin-bottom: 15rpx;
+  border-bottom: 15rpx solid #f3f3f3;
 }
 .user-data-row > view {
   display: -webkit-box;
@@ -62,13 +100,13 @@
   align-items: center;
 }
 .user-data-row .num {
-  font-size: 38rpx;
+  font-size: 36rpx;
   color: #363636;
   font-family: arial;
   font-weight: bold;
 }
 .user-data-row .text {
-  font-size: 36rpx;
+  font-size: 34rpx;
   color: #666;
 }
 .action-row {
@@ -82,11 +120,11 @@
   -webkit-align-items: center;
   align-items: center;
   border-bottom: 1px solid #e9e9e9;
-  font-size: 38rpx;
+  font-size: 34rpx;
   color: #666;
 }
 .action-row .action-img {
-  width: 66rpx;
+  width: 56rpx;
   margin-right: 20rpx;
 }
 .quit-login {

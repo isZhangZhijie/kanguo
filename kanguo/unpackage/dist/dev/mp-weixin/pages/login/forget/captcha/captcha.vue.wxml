@@ -4,18 +4,18 @@
       <view class="_view data-v-cc6ca2f0 phone-num"> {{ phone }}
         <image src="../../../../static/images/login_button_edit@3x.png" mode="widthFix" class="_image data-v-cc6ca2f0"></image>
       </view>
-      <view class="_view data-v-cc6ca2f0 login-input captcha-num" bindtap="handleProxy" data-eventid="{{'wEq-4'}}" data-comkey="{{$k}}">
-        <input focus="{{focusIndex==0?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'ji7-0'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
-        <input focus="{{focusIndex==1?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'0yq-1'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
-        <input focus="{{focusIndex==2?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'8WB-2'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
-        <input focus="{{focusIndex==3?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'jey-3'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
+      <view class="_view data-v-cc6ca2f0 login-input captcha-num" bindtap="handleProxy" data-eventid="{{'0y1-4'}}" data-comkey="{{$k}}">
+        <input focus="{{focusIndex==0?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'sdR-0'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
+        <input focus="{{focusIndex==1?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'S7B-1'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
+        <input focus="{{focusIndex==2?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'dZD-2'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
+        <input focus="{{focusIndex==3?true:false}}" type="text" maxlength="1" value="" bindinput="handleProxy" data-eventid="{{'AjU-3'}}" data-comkey="{{$k}}" class="_input data-v-cc6ca2f0" />
       </view>
-      <view bindtap="handleProxy" class="_view data-v-cc6ca2f0 login-btn" data-eventid="{{'6Ts-5'}}" data-comkey="{{$k}}">下一步</view>
+      <view bindtap="handleProxy" class="_view data-v-cc6ca2f0 login-btn" data-eventid="{{'wsP-5'}}" data-comkey="{{$k}}">下一步</view>
     </view>
     <view class="_view data-v-cc6ca2f0 other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
       <text class="_text data-v-cc6ca2f0">其他方式登录</text>
       <view class="_view data-v-cc6ca2f0 other-way-list">
-        <image bindtap="handleProxy" class="_image data-v-cc6ca2f0 other-login" src="../../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'Ixv-6'}}" data-comkey="{{$k}}"></image>
+        <image bindtap="handleProxy" class="_image data-v-cc6ca2f0 other-login" src="../../../../static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'3aq-6'}}" data-comkey="{{$k}}"></image>
       </view>
     </view>
   </view>

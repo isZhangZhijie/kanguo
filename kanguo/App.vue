@@ -2,6 +2,33 @@
 	export default {
 		onLaunch: function () {
 			console.log('App Launch')
+			uni.getStorage({
+				key: 'hasLogin',
+				success: function (res) {
+				},
+				fail: function(res) {
+					uni.setStorage({
+						key: 'hasLogin',
+						data: false,
+						success: function () {
+							console.log('success');
+						}
+					});
+				}
+			});
+// 			uni.setStorage({
+// 				key: 'hasLogin',
+// 				data: false,
+// 				success: function () {
+// 					console.log('success');
+// 				}
+// 			});
+// 			uni.removeStorage({
+// 				key: 'hasLogin',
+// 				success: function (res) {
+// 					console.log('success');
+// 				}
+// 			});
 		},
 		onShow: function () {
 			console.log('App Show')

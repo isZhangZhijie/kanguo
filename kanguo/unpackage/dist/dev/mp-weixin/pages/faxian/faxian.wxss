@@ -62,7 +62,7 @@
   height: 50rpx;
 }
 .sel-box {
-  font-size: 38rpx;
+  font-size: 32rpx;
   color: #363636;
 }
 .sel-row {

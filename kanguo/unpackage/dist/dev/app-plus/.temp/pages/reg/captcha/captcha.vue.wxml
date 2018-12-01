@@ -1,0 +1,17 @@
+<template name="e2fd8d40">
+  <view class="_view data-v-4d7246db container">
+    <view class="_view data-v-4d7246db login-page-top">
+      <view class="_view data-v-4d7246db phone-num"> {{ phone }}
+        <image src="/static/images/login_button_edit@3x.png" mode="widthFix" class="_image data-v-4d7246db"></image>
+      </view>
+      <input class="_input data-v-4d7246db captcha-num-ipt" value="" bindinput="handleProxy" type="number" focus maxlength="4" data-eventid="{{'VOW-0'}}" data-comkey="{{$k}}" />
+      <view bindtap="handleProxy" class="_view data-v-4d7246db login-btn" data-eventid="{{'pMT-1'}}" data-comkey="{{$k}}">下一步</view>
+    </view>
+    <view class="_view data-v-4d7246db other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
+      <text class="_text data-v-4d7246db">其他方式登录</text>
+      <view class="_view data-v-4d7246db other-way-list">
+        <image bindtap="handleProxy" class="_image data-v-4d7246db other-login" src="/static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'diI-2'}}" data-comkey="{{$k}}"></image>
+      </view>
+    </view>
+  </view>
+</template>
