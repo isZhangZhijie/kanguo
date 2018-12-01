@@ -78,8 +78,8 @@
 			},
 			login() {
 				var _this = this
-				console.log(this.phone)
-				console.log(this.password)
+// 				console.log(this.phone)
+// 				console.log(this.password)
 				uni.request({
 					url: 'http://www.aikm.cn/api/login',
 					method: 'POST',
@@ -93,7 +93,6 @@
 							if(!res.data.data.head_img) {
 								res.data.data.head_img = '/static/images/head_img.png'
 							}
-							console.log(JSON.stringify(res.data))
 							uni.setStorage({
 								key: 'userData',
 								data: res.data.data,

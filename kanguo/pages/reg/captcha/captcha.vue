@@ -43,7 +43,7 @@
 						code: parseInt(_this.captcha)
 					},
 					success: res => {
-						console.log(JSON.stringify(res.data))
+						// console.log(JSON.stringify(res.data))
 						if(res.data.code == 1) {
 							uni.navigateTo({
 								url: '../password/password?phone=' + this.phone

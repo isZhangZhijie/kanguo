@@ -9,33 +9,33 @@
         <view class="_view data-v-4a27a360 text">1618个视频</view>
         <view class="_view data-v-4a27a360 guanzhu">+关注</view>
       </view>
-      <image bindtap="handleProxy" class="_image data-v-4a27a360 back" src="/static/images/common_return@3x.png" mode="widthFix" data-eventid="{{'Upv-0'}}" data-comkey="{{$k}}"></image>
+      <image bindtap="handleProxy" class="_image data-v-4a27a360 back" src="/static/images/common_return@3x.png" mode="widthFix" data-eventid="{{'AWg-0'}}" data-comkey="{{$k}}"></image>
     </view>
     <view id="tab-bar" class="_view data-v-4a27a360 swiper-tab-bar">
-      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'pZ0-1-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+      <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'LyL-1-'+index}}" data-comkey="{{$k}}" wx:for="{{tabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{['swiper-tab-list', tabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
     </view>
     <view class="_view data-v-4a27a360 pianduan" hidden="{{!(tabIndex == 0)}}">
       <view class="_view data-v-4a27a360 video-about-tab">
-        <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'toM-2-'+index}}" data-comkey="{{$k}}" wx:for="{{sortTabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortTabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
+        <view wx:key="tab.id" key="{{tab.id}}" id="{{tab.id}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'EMP-2-'+index}}" data-comkey="{{$k}}" wx:for="{{sortTabBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortTabIndex == index ? 'active' : '']}}">{{tab.name}}</view>
       </view>
       <view class="_view data-v-4a27a360 anjishu" hidden="{{!(sortTabIndex == 0)}}">
         <scroll-view scroll-x class="_scroll-view data-v-4a27a360 sort-jishu">
-          <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'9vZ-3-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJishuBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJishuIndex == index ? 'active' : '']}}">{{tab}}</view>
+          <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'FEe-3-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJishuBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJishuIndex == index ? 'active' : '']}}">{{tab}}</view>
         </scroll-view>
         <view class="_view data-v-4a27a360 video-list">
-          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'3ER-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'ydw-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
         </view>
       </view>
       <view class="_view data-v-4a27a360 anrenqi" hidden="{{!(sortTabIndex == 1)}}">
         <view class="_view data-v-4a27a360 video-list">
-          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'fvd-1-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+          <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'xWF-1-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
         </view>
       </view>
       <view class="_view data-v-4a27a360 anbofangliang" hidden="{{!(sortTabIndex == 2)}}"> 欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧欢迎来到喜帖吧 </view>
     </view>
     <view class="_view data-v-4a27a360 juqing" hidden="{{!(tabIndex == 1)}}">
       <scroll-view scroll-x class="_scroll-view data-v-4a27a360 sort-jishu">
-        <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'19O-4-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJuqingBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJuqingIndex == index ? 'active' : '']}}">{{tab}}</view>
+        <view wx:key="index" key="{{index}}" data-current="{{index}}" bindtap="handleProxy" data-eventid="{{'LRz-4-'+index}}" data-comkey="{{$k}}" wx:for="{{sortJuqingBars}}" wx:for-index="index" wx:for-item="tab" class="_view data-v-4a27a360 {{[sortJuqingIndex == index ? 'active' : '']}}">{{tab}}</view>
       </scroll-view>
       <view class="_view data-v-4a27a360 juqing-list">
         <view class="_view data-v-4a27a360 juqing-item">

@@ -2,8 +2,8 @@
 	<view class="container">
 		<view class="login-page-top">
 			<view class="login-input phone-password">
-				<image src="../../../../static/images/login_signLock@3x.png" mode="aspectFit"></image>
-				<input focus=true value="" placeholder="请输入长度大于6位数的密码" :password="showPassword" />
+				<image src="/static/images/login_signLock@3x.png" mode="aspectFit"></image>
+				<input focus value="" placeholder="请输入不少于6位数的密码" v-model="password" :password="showPassword" />
 				<view class="uni-icon uni-icon-eye" :class="[!showPassword ? 'uni-active' : '']" @click="changePassword"></view>
 			</view>
 			<view class="login-btn" @tap="goIndex">完成并登陆</view>
@@ -11,7 +11,7 @@
 		<view class="other-login-way" v-bind:style="{top: positionTop + 'px'}">
 			<text>其他方式登录</text>
 			<view class="other-way-list">
-				<image @tap="goWechatLogin" class="other-login" src="../../../../static/images/login_button_WeixinEnter@3x.png"></image>
+				<image @tap="goWechatLogin" class="other-login" src="/static/images/login_button_WeixinEnter@3x.png"></image>
 			</view>
 		</view>
 	</view>
@@ -24,6 +24,7 @@
 				positionTop: 0,
 				phone: "",
 				showPassword: true,
+				password: ''
 			};
 		},
 		methods: {
@@ -43,14 +44,46 @@
 				this.showPassword = !this.showPassword;
 			},
 			goIndex() {
-				console.log(123)
-				uni.switchTab({
-					url: '../../../index/index'
-				})
+				var _this = this
+				var reg = /\w{6,}/  // 字母数字下划线，最少六位
+				if(reg.test(this.password)) {
+					uni.request({
+						url: 'http://www.aikm.cn/api/retrieve',
+						method: 'POST',
+						data: {
+							phone: _this.phone,
+							password: _this.password
+						},
+						success: res => {
+							// console.log(JSON.stringify(res.data))
+							
+							if(res.data.code == 1) {
+								uni.showToast({
+									title: res.data.msg,
+									duration: 3000,
+									icon: 'success',
+								});
+								setTimeout(function() {
+									uni.redirectTo({
+										url: '../../login-phone/login-phone'
+									});
+								}, 800)
+							}
+						}
+					});
+				} else {
+					uni.showToast({
+						title: '请输入不少于6位的字母数字下划线',
+						duration: 3000,
+						icon: 'none',
+					});
+				}
+				
 			}
 		},
-		onLoad() {
+		onLoad(option) {
 			this.initPosition();
+			this.phone = option.phone;
 		}
 	}
 </script>

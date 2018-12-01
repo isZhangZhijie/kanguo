@@ -3,34 +3,15 @@
 		<view class="login-page-top">
 			<view class="phone-num">
 				{{ phone }}
-				<image src="../../../../static/images/login_button_edit@3x.png" mode="widthFix"></image>
+				<image src="/static/images/login_button_edit@3x.png" mode="widthFix"></image>
 			</view>
-			<view class="login-input captcha-num" @tap="iptFocus">
-				<input :focus="focusIndex==0?true:false" type="text" maxlength=1 value="" @input="nextFocus" />
-				<input :focus="focusIndex==1?true:false" type="text" maxlength=1 value="" @input="nextFocus" />
-				<input :focus="focusIndex==2?true:false" type="text" maxlength=1 value="" @input="nextFocus" />
-				<input :focus="focusIndex==3?true:false" type="text" maxlength=1 value="" @input="nextFocus" />
-				
-				<!-- <input
-					:focus="focus"
-					@input="captchaIpt"
-					maxlength=4
-					class="captcha-ipt"
-					type="number"
-					value=""
-					style="display: none;"
-				/>
-				<text></text>
-				<text></text>
-				<text></text>
-				<text></text> -->
-			</view>
+			<input class="captcha-num-ipt" v-model="captcha" type="number" focus value="" maxlength=4 />
 			<view @tap="goPassword" class="login-btn">下一步</view>
 		</view>
 		<view class="other-login-way" v-bind:style="{top: positionTop + 'px'}">
 			<text>其他方式登录</text>
 			<view class="other-way-list">
-				<image @tap="goWechatLogin" class="other-login" src="../../../../static/images/login_button_WeixinEnter@3x.png"></image>
+				<image @tap="goWechatLogin" class="other-login" src="/static/images/login_button_WeixinEnter@3x.png"></image>
 			</view>
 		</view>
 	</view>
@@ -43,7 +24,7 @@
 				phone: "",
 				positionTop: 0,
 				focusIndex: 0,
-				focus: true
+				captcha: ''
 			};
 		},
 		methods: {
@@ -51,8 +32,30 @@
 				this.positionTop = uni.getSystemInfoSync().windowHeight - 140;
 			},
 			goPassword() {
-				uni.navigateTo({
-					url: '../password/password?phone=' + this.phone
+				var _this = this
+				// console.log(this.captcha)
+				// return
+				uni.request({
+					url: 'http://www.aikm.cn/api/auth/code',
+					method: 'POST',
+					data: {
+						phone: _this.phone,
+						code: parseInt(_this.captcha)
+					},
+					success: res => {
+						// console.log(JSON.stringify(res.data))
+						if(res.data.code == 1) {
+							uni.navigateTo({
+								url: '../password/password?phone=' + this.phone
+							});
+						} else {
+							uni.showToast({
+								title: res.data.msg,
+								duration: 2000,
+								icon: 'none',
+							});
+						}
+					}
 				});
 			},
 			goWechatLogin() {
@@ -60,39 +63,29 @@
 					url: '../../login-wechat/login-wechat'
 				})
 			},
-			iptFocus() {
-				this.focusIndex = 0
-// 				console.log(this.focus)
-// 				this.focus = true
-			},
-// 			captchaIpt() {
-// 				this.focusIndex = 0
-// 			},
-			nextFocus(e) {
-				
-				if(e.detail.value.length == 1 && this.focusIndex < 3) {
-					this.focusIndex += 1
-					console.log(this.focusIndex)
-				} else if(e.detail.value.length == 0 && this.focusIndex > 0) {
-					this.focusIndex -= 1
-					console.log(this.focusIndex)
-				}
-			},
-			firstFocus(e) {
-				this.focusIndex = 0
-				console.log(this.focusIndex)
-			}
 		},
 		onLoad: function (option) { //option为object类型，会序列化上个页面传递的参数
 			this.phone = option.phone;
 			this.initPosition();
-			this.focusIndex = 0;
 		}
 	}
 </script>
 
 <style>
 	/* @import "../../../../common/icon.css"; */
+	.captcha-num-ipt {
+		margin-bottom: 80upx;
+		border: 1px solid #9e9e9e;
+		width: 320upx;
+		height: 80upx;
+		font-size: 32px;
+		padding: 20upx 40upx;
+		font-family: arial;
+		text-align: center;
+		background: #e9e9e9;
+	}
+	
+	
 	.container {
 		display: flex;
 		flex-direction: column;

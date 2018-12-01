@@ -56,7 +56,7 @@
 							password: _this.password
 						},
 						success: res => {
-							console.log(JSON.stringify(res.data))
+							// console.log(JSON.stringify(res.data))
 							
 							if(res.data.code == 1) {
 								res.data.data.head_img = '/static/images/head_img.png'

@@ -2,7 +2,7 @@
 	<view class="container">
 		<view class="login-page-top">
 			<view class="login-input phone-num">
-				<image src="../../../../static/images/login_signPhone@3x.png" mode="aspectFit"></image>
+				<image src="/static/images/login_signPhone@3x.png" mode="aspectFit"></image>
 				<input type="number" focus=true value="" v-model="phone" placeholder="请输入手机号码" :value="inputClearValue" @input="bindClearInput" />
 				<view class="uni-icon uni-icon-clear" v-if="showClearIcon" @click="clearIcon"></view>
 			</view>
@@ -11,7 +11,7 @@
 		<view class="other-login-way" v-bind:style="{top: positionTop + 'px'}">
 			<text>其他方式登录</text>
 			<view class="other-way-list">
-				<image @tap="goWechatLogin" class="other-login" src="../../../../static/images/login_button_WeixinEnter@3x.png"></image>
+				<image @tap="goWechatLogin" class="other-login" src="/static/images/login_button_WeixinEnter@3x.png"></image>
 			</view>
 		</view>
 	</view>
@@ -29,9 +29,43 @@
 		},
 		methods: {
 			goCaptcha() {
-				uni.navigateTo({
-					url: '../captcha/captcha?phone=' + this.phone
-				});
+				var _this = this
+				if(this.phone.length == 11) {
+					// 找回密码手机号验证是否存在
+					uni.request({
+						url: 'http://www.aikm.cn/api/auth/phone',
+						method: 'POST',
+						data: {phone: _this.phone},
+						success: res => {
+							// console.log(JSON.stringify(res.data))
+							if(res.data.code == 1) {
+								uni.showToast({
+									title: '验证码已发送',
+									duration: 2000,
+									icon: 'none',
+								});
+								// return
+								setTimeout(function() {
+									uni.navigateTo({
+										url: '../captcha/captcha?phone=' + _this.phone
+									});
+								}, 800)
+							} else {
+								uni.showToast({
+									title: res.data.msg,
+									duration: 2000,
+									icon: 'none',
+								});
+							}
+						}
+					});
+				} else {
+					uni.showToast({
+						title: '请输入正确手机号',
+						duration: 2000,
+						icon: 'none',
+					});
+				}
 			},
 			initPosition() {
 				/**
