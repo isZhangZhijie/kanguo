@@ -4,7 +4,7 @@
     <view class="_view data-v-697f88d8 time-row"> 共
       <text class="_text data-v-697f88d8">12</text>个收藏片段 </view>
     <view class="_view data-v-697f88d8 video-list">
-      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'UVt-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
+      <template wx:key="val" data="{{...$root['0'], ...$root[$kk+'4Q5-0-'+index],$root}}" is="1f73f5d3" wx:for="{{[1,2,3]}}" wx:for-index="index" wx:for-item="val"></template>
     </view>
   </view>
 </template>

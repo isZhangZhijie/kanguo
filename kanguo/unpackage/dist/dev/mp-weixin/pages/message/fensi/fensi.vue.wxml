@@ -9,7 +9,7 @@
             <text class="_text data-v-f7a66cb8 time">13:39</text>
           </view>
           <view class="_view data-v-f7a66cb8 msg-text"> 关注了你
-            <view bindtap="handleProxy" data-eventid="{{'fZl-0-'+index}}" data-comkey="{{$k}}" class="_view data-v-f7a66cb8 {{[guanzhuOrNot ? 'not-guanzhu' : 'guanzhu']}}">{{guanzhuMsg}}</view>
+            <view bindtap="handleProxy" data-eventid="{{'uqo-0-'+index}}" data-comkey="{{$k}}" class="_view data-v-f7a66cb8 {{[guanzhuOrNot ? 'not-guanzhu' : 'guanzhu']}}">{{guanzhuMsg}}</view>
           </view>
         </view>
       </view>

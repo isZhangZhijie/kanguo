@@ -2,10 +2,10 @@
   <view class="_view data-v-1a043758 page">
     <view class="_view data-v-1a043758 feedback-title">
       <text class="_text data-v-1a043758">问题和意见</text>
-      <text class="_text data-v-1a043758 feedback-quick" bindtap="handleProxy" data-eventid="{{'QcG-0'}}" data-comkey="{{$k}}">快速键入</text>
+      <text class="_text data-v-1a043758 feedback-quick" bindtap="handleProxy" data-eventid="{{'trH-0'}}" data-comkey="{{$k}}">快速键入</text>
     </view>
     <view class="_view data-v-1a043758 feedback-body">
-      <textarea placeholder="请详细描述你的问题和意见..." value="{{sendDate.content}}" bindinput="handleProxy" class="_textarea data-v-1a043758 feedback-textare" data-eventid="{{'CSt-1'}}" data-comkey="{{$k}}" />
+      <textarea placeholder="请详细描述你的问题和意见..." value="{{sendDate.content}}" bindinput="handleProxy" class="_textarea data-v-1a043758 feedback-textare" data-eventid="{{'ao1-1'}}" data-comkey="{{$k}}" />
     </view>
     <view class="_view data-v-1a043758 feedback-title">
       <text class="_text data-v-1a043758">图片(选填,提供问题截图,总大小10M以下)</text>
@@ -20,12 +20,12 @@
           <view class="_view data-v-1a043758 uni-uploader__files">
             <block wx:key="index" key="{{index}}" wx:for="{{imageList}}" wx:for-index="index" wx:for-item="image">
               <view class="_view data-v-1a043758 uni-uploader__file" style="position: relative;">
-                <image class="_image data-v-1a043758 uni-uploader__img" src="{{image}}" bindtap="handleProxy" data-eventid="{{'srr-2-'+index}}" data-comkey="{{$k}}"></image>
-                <view class="_view data-v-1a043758 close-view" bindtap="handleProxy" data-eventid="{{'iTm-3-'+index}}" data-comkey="{{$k}}">x</view>
+                <image class="_image data-v-1a043758 uni-uploader__img" src="{{image}}" bindtap="handleProxy" data-eventid="{{'MTs-2-'+index}}" data-comkey="{{$k}}"></image>
+                <view class="_view data-v-1a043758 close-view" bindtap="handleProxy" data-eventid="{{'t3K-3-'+index}}" data-comkey="{{$k}}">x</view>
               </view>
             </block>
             <view class="_view data-v-1a043758 uni-uploader__input-box" hidden="{{!(imageList.length < 8)}}">
-              <view class="_view data-v-1a043758 uni-uploader__input" bindtap="handleProxy" data-eventid="{{'75s-4'}}" data-comkey="{{$k}}"></view>
+              <view class="_view data-v-1a043758 uni-uploader__input" bindtap="handleProxy" data-eventid="{{'BxE-4'}}" data-comkey="{{$k}}"></view>
             </view>
           </view>
         </view>
@@ -35,8 +35,8 @@
       <text class="_text data-v-1a043758">请输入联系电话、邮箱或QQ</text>
     </view>
     <view class="_view data-v-1a043758 feedback-body">
-      <input class="_input data-v-1a043758 feedback-input" value="{{sendDate.contact}}" bindinput="handleProxy" placeholder="(选填,方便我们联系你 )" data-eventid="{{'Mg8-5'}}" data-comkey="{{$k}}" />
+      <input class="_input data-v-1a043758 feedback-input" value="{{sendDate.contact}}" bindinput="handleProxy" placeholder="(选填,方便我们联系你 )" data-eventid="{{'fJm-5'}}" data-comkey="{{$k}}" />
     </view>
-    <button type="primary" class="_button data-v-1a043758 feedback-submit" bindtap="handleProxy" data-eventid="{{'CmV-6'}}" data-comkey="{{$k}}">提交</button>
+    <button type="primary" class="_button data-v-1a043758 feedback-submit" bindtap="handleProxy" data-eventid="{{'iQQ-6'}}" data-comkey="{{$k}}">提交</button>
   </view>
 </template>

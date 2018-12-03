@@ -3,15 +3,15 @@
     <view class="_view data-v-7eda1f83 login-page-top">
       <view class="_view data-v-7eda1f83 login-input phone-num">
         <image src="/static/images/login_signPhone@3x.png" mode="aspectFit" class="_image data-v-7eda1f83"></image>
-        <input type="number" focus="true" value="{{inputClearValue}}" bindinput="handleProxy" placeholder="请输入手机号码" data-eventid="{{'Zuf-0'}}" data-comkey="{{$k}}" class="_input data-v-7eda1f83" />
-        <view class="_view data-v-7eda1f83 uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'1iD-1'}}" data-comkey="{{$k}}"></view>
+        <input type="number" focus="true" value="{{inputClearValue}}" bindinput="handleProxy" placeholder="请输入手机号码" data-eventid="{{'0PB-0'}}" data-comkey="{{$k}}" class="_input data-v-7eda1f83" />
+        <view class="_view data-v-7eda1f83 uni-icon uni-icon-clear" wx:if="{{showClearIcon}}" bindtap="handleProxy" data-eventid="{{'kb0-1'}}" data-comkey="{{$k}}"></view>
       </view>
-      <view bindtap="handleProxy" class="_view data-v-7eda1f83 login-btn" data-eventid="{{'m3Y-2'}}" data-comkey="{{$k}}">获取验证码</view>
+      <view bindtap="handleProxy" class="_view data-v-7eda1f83 login-btn" data-eventid="{{'Ilw-2'}}" data-comkey="{{$k}}">获取验证码</view>
     </view>
     <view class="_view data-v-7eda1f83 other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
       <text class="_text data-v-7eda1f83">其他方式登录</text>
       <view class="_view data-v-7eda1f83 other-way-list">
-        <image bindtap="handleProxy" class="_image data-v-7eda1f83 other-login" src="/static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'NzC-3'}}" data-comkey="{{$k}}"></image>
+        <image bindtap="handleProxy" class="_image data-v-7eda1f83 other-login" src="/static/images/login_button_WeixinEnter@3x.png" data-eventid="{{'TCW-3'}}" data-comkey="{{$k}}"></image>
       </view>
     </view>
   </view>

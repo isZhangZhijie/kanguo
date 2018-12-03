@@ -10,18 +10,18 @@
 							<view class="uni-cropper-view-box">
 								<view class="uni-cropper-dashed-h"></view>
 								<view class="uni-cropper-dashed-v"></view>
-								<view class="uni-cropper-line-t" data-drag="top" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
-								<view class="uni-cropper-line-r" data-drag="right" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
-								<view class="uni-cropper-line-b" data-drag="bottom" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
-								<view class="uni-cropper-line-l" data-drag="left" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
-								<view class="uni-cropper-point point-t" data-drag="top" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
-								<view class="uni-cropper-point point-tr" data-drag="topTight"></view>
-								<view class="uni-cropper-point point-r" data-drag="right" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
+								<view class="uni-cropper-line-t"></view>
+								<view class="uni-cropper-line-r"></view>
+								<view class="uni-cropper-line-b"></view>
+								<view class="uni-cropper-line-l"></view>
+								<view class="uni-cropper-point point-t"></view>
+								<view class="uni-cropper-point point-tr"></view>
+								<view class="uni-cropper-point point-r"></view>
 								<view class="uni-cropper-point point-rb" data-drag="rightBottom" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
-								<view class="uni-cropper-point point-b" data-drag="bottom" @touchstart.stop="dragStart" @touchmove.stop="dragMove" @touchend.stop="dragEnd"></view>
-								<view class="uni-cropper-point point-bl" data-drag="bottomLeft"></view>
-								<view class="uni-cropper-point point-l" data-drag="left" @touchstart.stop="dragStart" @touchmove.stop="dragMove"></view>
-								<view class="uni-cropper-point point-lt" data-drag="leftTop"></view>
+								<view class="uni-cropper-point point-b"></view>
+								<view class="uni-cropper-point point-bl"></view>
+								<view class="uni-cropper-point point-l"></view>
+								<view class="uni-cropper-point point-lt"></view>
 							</view>
 						</view>
 					</view>
@@ -51,7 +51,7 @@
 		CUT_B, // 初始化拖拽元素的
 		CUT_W, // 初始化拖拽元素的宽度
 		CUT_H, //  初始化拖拽元素的高度
-		IMG_RATIO, // 图片比例
+		IMG_RATIO, // 图片长宽比例
 		IMG_REAL_W, // 图片实际的宽度
 		IMG_REAL_H, // 图片实际的高度
 		DRAFG_MOVE_RATIO = 1, //移动时候的比例,
@@ -64,16 +64,16 @@
 		 */
 		data() {
 			return {
-				name:'杨大宝',
-				imageSrc: 'https://img-cdn-qiniu.dcloud.net.cn/demo_crop.jpg',
+				name:'张志杰',
+				imageSrc: '',
 				isShowImg: false,
-				// 初始化的宽高
+				// 图片显示区域初始化的宽高
 				cropperInitW: SCREEN_WIDTH,
 				cropperInitH: SCREEN_WIDTH,
-				// 动态的宽高
+				// 动态的宽高   图片显示的宽高
 				cropperW: SCREEN_WIDTH,
 				cropperH: SCREEN_WIDTH,
-				// 动态的left top值
+				// 动态的left top值   图片定位的left top 值
 				cropperL: 0,
 				cropperT: 0,
 
@@ -146,10 +146,10 @@
 						let minRange = IMG_REAL_W > IMG_REAL_H ? IMG_REAL_W : IMG_REAL_H
 						INIT_DRAG_POSITION = minRange > INIT_DRAG_POSITION ? INIT_DRAG_POSITION : minRange
 						// 根据图片的宽高显示不同的效果   保证图片可以正常显示
-						if (IMG_RATIO >= 1) {
-							let cutT = Math.ceil((SCREEN_WIDTH / IMG_RATIO - (SCREEN_WIDTH / IMG_RATIO - INIT_DRAG_POSITION)) / 2);
-							let cutB = cutT;
-							let cutL = Math.ceil((SCREEN_WIDTH - SCREEN_WIDTH + INIT_DRAG_POSITION) / 2);
+						if (IMG_RATIO >= 1) { // 宽 >= 高
+							let cutT = 0;
+							let cutB = 0;
+							let cutL = Math.ceil((IMG_REAL_W - IMG_REAL_H) / 2);
 							let cutR = cutL;
 							_this.setData({
 								cropperW: SCREEN_WIDTH,
@@ -169,9 +169,9 @@
 								innerAspectRadio: IMG_RATIO
 							})
 						} else {
-							let cutL = Math.ceil((SCREEN_WIDTH * IMG_RATIO - (SCREEN_WIDTH * IMG_RATIO)) / 2);
+							let cutL = 0;
 							let cutR = cutL;
-							let cutT = Math.ceil((SCREEN_WIDTH - INIT_DRAG_POSITION) / 2);
+							let cutT = Math.ceil((IMG_REAL_H - IMG_REAL_W) / 2);
 							let cutB = cutT;
 							_this.setData({
 								cropperW: SCREEN_WIDTH * IMG_RATIO,
@@ -287,54 +287,36 @@
 			dragMove(e) {
 				var _this = this
 				var dragType = e.target.dataset.drag
-				switch (dragType) {
-					case 'right':
-						var dragLength = (T_PAGE_X - e.touches[0].pageX) * DRAFG_MOVE_RATIO
-						if (CUT_R + dragLength < 0) dragLength = -CUT_R
-						this.setData({
-							cutR: CUT_R + dragLength
-						})
-						break;
-					case 'left':
-						var dragLength = (T_PAGE_X - e.touches[0].pageX) * DRAFG_MOVE_RATIO
-						if (CUT_L - dragLength < 0) dragLength = CUT_L
-						if ((CUT_L - dragLength) > (this.cropperW - this.cutR)) dragLength = CUT_L - (this.cropperW - this.cutR)
-						this.setData({
-							cutL: CUT_L - dragLength
-						})
-						break;
-					case 'top':
-						var dragLength = (T_PAGE_Y - e.touches[0].pageY) * DRAFG_MOVE_RATIO
-						if (CUT_T - dragLength < 0) dragLength = CUT_T
-						if ((CUT_T - dragLength) > (this.cropperH - this.cutB)) dragLength = CUT_T - (this.cropperH - this.cutB)
-						this.setData({
-							cutT: CUT_T - dragLength
-						})
-						break;
-					case 'bottom':
-						var dragLength = (T_PAGE_Y - e.touches[0].pageY) * DRAFG_MOVE_RATIO
-						if (CUT_B + dragLength < 0) dragLength = -CUT_B
-						this.setData({
-							cutB: CUT_B + dragLength
-						})
-						break;
-					case 'rightBottom':
-						var dragLengthX = (T_PAGE_X - e.touches[0].pageX) * DRAFG_MOVE_RATIO
-						var dragLengthY = (T_PAGE_Y - e.touches[0].pageY) * DRAFG_MOVE_RATIO
+				// console.log(dragType)
+				var dragLengthX = (T_PAGE_X - e.touches[0].pageX) * DRAFG_MOVE_RATIO
+				var dragLengthY = (T_PAGE_Y - e.touches[0].pageY) * DRAFG_MOVE_RATIO
+				
+				// if(CUT_R + dragLengthX >= 0) var dragLengthY = dragLengthX
+				
+				if(Math.abs(dragLengthX) >= Math.abs(dragLengthY)) dragLengthY = dragLengthX
+				if(Math.abs(dragLengthX) < Math.abs(dragLengthY)) dragLengthX = dragLengthY
+				
+				let length = Math.abs(dragLengthX) >= Math.abs(dragLengthY) ? dragLengthX : dragLengthY
+				
+				
+				// 边界
+				if (CUT_B + dragLengthY < 0) length = -CUT_B
+				if (CUT_R + dragLengthX < 0) length = -CUT_R
+				
+// 				if (CUT_B + dragLengthY < 0) {
+// 					dragLengthY = -CUT_B
+// 				}
+// 				if (CUT_R + dragLengthX < 0) {
+// 					dragLengthX = -CUT_R
+// 				}
+				
+				let cutB = CUT_B + length;
+				let cutR = CUT_R + length;
 
-						if (CUT_B + dragLengthY < 0) dragLengthY = -CUT_B
-						if (CUT_R + dragLengthX < 0) dragLengthX = -CUT_R
-						let cutB = CUT_B + dragLengthY;
-						let cutR = CUT_R + dragLengthX;
-
-						this.setData({
-							cutB: cutB,
-							cutR: cutR
-						})
-						break;
-					default:
-						break;
-				}
+				this.setData({
+					cutB: cutB,
+					cutR: cutR
+				})
 			}
 		}
 	}
