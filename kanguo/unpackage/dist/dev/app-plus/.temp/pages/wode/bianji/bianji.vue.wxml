@@ -1,11 +1,32 @@
 <template name="a6ba324e">
   <view class="_view data-v-5f89a510 container">
     <view class="_view data-v-5f89a510 page-body uni-content-info">
-      <view class="_view data-v-5f89a510 cropper-content">
-        <view wx:if="{{isShowImg}}" class="_view data-v-5f89a510 uni-corpper" style=" {{'width:' + cropperInitW + 'px;height:' + cropperInitH + 'px;background:#000'}}">
+      <view class="_view data-v-5f89a510 avatar">
+        <image src="{{head_img}}" bindtap="handleProxy" mode="widthFix" data-eventid="{{'96G-0'}}" data-comkey="{{$k}}" class="_image data-v-5f89a510"></image>
+      </view>
+      <view class="_view data-v-5f89a510 input-box">
+        <text class="_text data-v-5f89a510">昵称：</text>
+        <input type="text" value="{{nickname}}" bindinput="handleProxy" maxlength="12" placeholder="12字以内" data-eventid="{{'VzI-1'}}" data-comkey="{{$k}}" class="_input data-v-5f89a510" />
+      </view>
+      <view class="_view data-v-5f89a510 input-box">
+        <text class="_text data-v-5f89a510">个性签名：</text>
+        <input type="text" value="{{signature}}" bindinput="handleProxy" maxlength="20" placeholder="20字以内" data-eventid="{{'hPF-2'}}" data-comkey="{{$k}}" class="_input data-v-5f89a510" />
+      </view>
+      <view class="_view data-v-5f89a510 input-box">
+        <text class="_text data-v-5f89a510">性别：</text>
+        <radio-group class="_radio-group data-v-5f89a510 radio-group">
+          <label class="_label data-v-5f89a510 radio">
+            <radio value="{{sex}}" color="#feda46" bindchange="handleProxy" data-eventid="{{'oMJ-3'}}" data-comkey="{{$k}}" class="_radio data-v-5f89a510" />女 </label>
+          <label class="_label data-v-5f89a510 radio">
+            <radio value="{{sex}}" color="#feda46" bindchange="handleProxy" data-eventid="{{'22V-4'}}" data-comkey="{{$k}}" class="_radio data-v-5f89a510" />男 </label>
+        </radio-group>
+      </view>
+      <view class="_view data-v-5f89a510 finish-btn" bindtap="handleProxy" data-eventid="{{'fuP-5'}}" data-comkey="{{$k}}">完成</view>
+      <view wx:if="{{isShowImg}}" class="_view data-v-5f89a510 cropper-content">
+        <view class="_view data-v-5f89a510 uni-corpper" style=" {{'width:' + cropperInitW + 'px;height:' + cropperInitH + 'px;background:#000'}}">
           <view class="_view data-v-5f89a510 uni-corpper-content" style=" {{'width:' +  cropperW +  'px;height:' +  cropperH +  'px;left:' +  cropperL +  'px;top:' +  cropperT +  'px'}}">
             <image src="{{imageSrc}}" class="_image data-v-5f89a510" style=" {{'width:' + cropperW + 'px;height:' + cropperH + 'px'}}"></image>
-            <view class="_view data-v-5f89a510 uni-corpper-crop-box" catchtouchstart="handleProxy" catchtouchmove="handleProxy" catchtouchend="handleProxy" data-eventid="{{'ZQj-1'}}" data-comkey="{{$k}}" style=" {{'left:' +  cutL +  'px;top:' +  cutT +  'px;right:' +  cutR +  'px;bottom:' +  cutB +  'px'}}">
+            <view class="_view data-v-5f89a510 uni-corpper-crop-box" catchtouchstart="handleProxy" catchtouchmove="handleProxy" catchtouchend="handleProxy" data-eventid="{{'Nyl-7'}}" data-comkey="{{$k}}" style=" {{'left:' +  cutL +  'px;top:' +  cutT +  'px;right:' +  cutR +  'px;bottom:' +  cutB +  'px'}}">
               <view class="_view data-v-5f89a510 uni-cropper-view-box">
                 <view class="_view data-v-5f89a510 uni-cropper-dashed-h"></view>
                 <view class="_view data-v-5f89a510 uni-cropper-dashed-v"></view>
@@ -16,7 +37,7 @@
                 <view class="_view data-v-5f89a510 uni-cropper-point point-t"></view>
                 <view class="_view data-v-5f89a510 uni-cropper-point point-tr"></view>
                 <view class="_view data-v-5f89a510 uni-cropper-point point-r"></view>
-                <view class="_view data-v-5f89a510 uni-cropper-point point-rb" data-drag="rightBottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'4HU-0'}}" data-comkey="{{$k}}"></view>
+                <view class="_view data-v-5f89a510 uni-cropper-point point-rb" data-drag="rightBottom" catchtouchstart="handleProxy" catchtouchmove="handleProxy" data-eventid="{{'ImD-6'}}" data-comkey="{{$k}}"></view>
                 <view class="_view data-v-5f89a510 uni-cropper-point point-b"></view>
                 <view class="_view data-v-5f89a510 uni-cropper-point point-bl"></view>
                 <view class="_view data-v-5f89a510 uni-cropper-point point-l"></view>
@@ -25,13 +46,11 @@
             </view>
           </view>
         </view>
-      </view>
-      <view class="_view data-v-5f89a510 cropper-config">
-        <button type="primary reverse" bindtap="handleProxy" style="margin-top: 30rpx;" data-eventid="{{'iBc-2'}}" data-comkey="{{$k}}" class="_button data-v-5f89a510"> 选择图片 </button>
-        <button type="warn" bindtap="handleProxy" style="margin-top: 30rpx;" data-eventid="{{'FV9-3'}}" data-comkey="{{$k}}" class="_button data-v-5f89a510"> 点击生成图片 </button>
+        <view class="_view data-v-5f89a510 cropper-config">
+          <button bindtap="handleProxy" style="margin-top: 30rpx;" data-eventid="{{'QTi-8'}}" data-comkey="{{$k}}" class="_button data-v-5f89a510"> 点击生成头像 </button>
+        </view>
       </view>
       <canvas canvas-id="myCanvas" class="_canvas data-v-5f89a510" style=" {{'position:absolute;border: 1px solid red; width:' +  imageW +  'px;height:' +  imageH +  'px;top:-9999px;left:-9999px;'}}"></canvas>
     </view>
-    <page-foot name="{{name}}" class="_page-foot data-v-5f89a510"></page-foot>
   </view>
 </template>

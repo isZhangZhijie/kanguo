@@ -1,8 +1,33 @@
 <template>
 	<view class="container">
 		<view class="page-body uni-content-info">
-			<view class='cropper-content'>
-				<view v-if="isShowImg" class="uni-corpper" :style="'width:'+cropperInitW+'px;height:'+cropperInitH+'px;background:#000'">
+			<view class="avatar">
+				<image :src="head_img" @click="getImage" mode="widthFix"></image>
+			</view>
+			<view class="input-box">
+				<text>昵称：</text>
+				<input type="text" v-model="nickname" maxlength="12" placeholder="12字以内" />
+			</view>
+			<view class="input-box">
+				<text>个性签名：</text>
+				<input type="text" v-model="signature" maxlength="20" placeholder="20字以内" />
+			</view>
+			<view class="input-box">
+				<text>性别：</text>
+				<!-- <radio-group class="radio-group" @change="radioChange"> -->
+				<radio-group class="radio-group">
+					<label class="radio">
+						<radio value="2" color="#feda46" v-model="sex" />女
+					</label>
+					<label class="radio">
+						<radio value="1" color="#feda46" v-model="sex" />男
+					</label>
+				</radio-group>
+			</view>
+			<view class="finish-btn" @tap="finish">完成</view>
+			
+			<view v-if="isShowImg" class='cropper-content'>
+				<view class="uni-corpper" :style="'width:'+cropperInitW+'px;height:'+cropperInitH+'px;background:#000'">
 					<view class="uni-corpper-content" :style="'width:'+cropperW+'px;height:'+cropperH+'px;left:'+cropperL+'px;top:'+cropperT+'px'">
 						<image :src="imageSrc" :style="'width:'+cropperW+'px;height:'+cropperH+'px'"></image>
 						<view class="uni-corpper-crop-box" @touchstart.stop="contentStartMove" @touchmove.stop="contentMoveing" @touchend.stop="contentTouchEnd"
@@ -26,14 +51,13 @@
 						</view>
 					</view>
 				</view>
+				<view class='cropper-config'>
+					<button @click="getImageInfo" style='margin-top: 30upx;'> 点击生成头像 </button>
+				</view>
 			</view>
-			<view class='cropper-config'>
-				<button type="primary reverse" @click="getImage" style='margin-top: 30upx;'> 选择图片 </button>
-				<button type="warn" @click="getImageInfo" style='margin-top: 30upx;'> 点击生成图片 </button>
-			</view>
+			
 			<canvas canvas-id="myCanvas" :style="'position:absolute;border: 1px solid red; width:'+imageW+'px;height:'+imageH+'px;top:-9999px;left:-9999px;'"></canvas>
 		</view>
-		<page-foot :name="name"></page-foot>
 	</view>
 </template>
 
@@ -91,13 +115,26 @@
 				cutB: SCREEN_WIDTH,
 				cutR: '100%',
 				qualityWidth: DRAW_IMAGE_W,
-				innerAspectRadio: DRAFG_MOVE_RATIO
+				innerAspectRadio: DRAFG_MOVE_RATIO,
+				
+				userData: '',
+				head_img: '',
+				nickname: '',
+				signature: '欢迎来到看过~',
+				sex: '',
 			}
 		},
 		/**
 		 * 生命周期函数--监听页面加载
 		 */
-		onLoad: function (options) {},
+		onLoad: function (options) {
+			console.log(options.userData)
+			this.userData = JSON.parse(options.userData)
+			this.head_img = this.userData.head_img
+			this.nickname = this.userData.nickname
+			this.signature = this.userData.signature
+			this.sex = this.userData.sex
+		},
 
 		/**
 		 * 生命周期函数--监听页面初次渲染完成
@@ -263,11 +300,15 @@
 						canvasId: 'myCanvas',
 						success: function (res) {
 							uni.hideLoading()
-							// 成功获得地址的地方
-							uni.previewImage({
-								current: '', // 当前显示图片的http链接
-								urls: [res.tempFilePath] // 需要预览的图片http链接列表
+							_this.setData({
+								isShowImg: false,
+								head_img: res.tempFilePath
 							})
+							// 成功获得地址的地方
+// 							uni.previewImage({
+// 								current: '', // 当前显示图片的http链接
+// 								urls: [res.tempFilePath] // 需要预览的图片http链接列表
+// 							})
 						}
 					});
 				});
@@ -291,24 +332,14 @@
 				var dragLengthX = (T_PAGE_X - e.touches[0].pageX) * DRAFG_MOVE_RATIO
 				var dragLengthY = (T_PAGE_Y - e.touches[0].pageY) * DRAFG_MOVE_RATIO
 				
-				// if(CUT_R + dragLengthX >= 0) var dragLengthY = dragLengthX
-				
 				if(Math.abs(dragLengthX) >= Math.abs(dragLengthY)) dragLengthY = dragLengthX
 				if(Math.abs(dragLengthX) < Math.abs(dragLengthY)) dragLengthX = dragLengthY
 				
 				let length = Math.abs(dragLengthX) >= Math.abs(dragLengthY) ? dragLengthX : dragLengthY
 				
-				
 				// 边界
 				if (CUT_B + dragLengthY < 0) length = -CUT_B
 				if (CUT_R + dragLengthX < 0) length = -CUT_R
-				
-// 				if (CUT_B + dragLengthY < 0) {
-// 					dragLengthY = -CUT_B
-// 				}
-// 				if (CUT_R + dragLengthX < 0) {
-// 					dragLengthX = -CUT_R
-// 				}
 				
 				let cutB = CUT_B + length;
 				let cutR = CUT_R + length;
@@ -317,6 +348,36 @@
 					cutB: cutB,
 					cutR: cutR
 				})
+			},
+			
+			radioChange: function (e) {
+				console.log('radio发生change事件，携带value值为：' + e.detail.value)
+				this.sex = e.detail.value
+			},
+			
+			finish() {
+				var _this = this
+				console.log(this.head_img)
+				console.log(this.nickname)
+				console.log(this.signature)
+				console.log(this.sex)
+				uni.request({
+					url: 'http://www.aikm.cn/api/edit/personal/data',
+					method: 'POST',
+					data: {
+						uid: _this.userData.id,
+						token: _this.userData.token,
+						head_img: _this.head_img,
+						nickname: _this.nickname,
+						sex: _this.sex,
+						signature: _this.signature
+					},
+					success: res => {
+						console.log(JSON.stringify(res.data))
+					},
+					fail: () => {},
+					complete: () => {}
+				});
 			}
 		}
 	}
@@ -335,14 +396,60 @@
 		align-items: center;
 		flex-direction: column; */
 	}
+	
+	.avatar {
+		padding-top: 80upx;
+		margin-bottom: 30upx;
+	}
+	.avatar image {
+		display: block;
+		margin: 0 auto;
+		width: 150upx;
+		border-radius: 50%;
+	}
+	.input-box {
+		padding: 0 60upx;
+		margin-bottom: 40upx;
+	}
+	.input-box text {
+		color: #9e9e9e;
+		padding-bottom: 20upx;
+	}
+	.input-box input {
+		border-bottom: 1px solid #363636;
+	}
+	.input-box .radio {
+		margin-right: 50upx;
+	}
+	.input-box radio {
+		color: #feda46;
+	}
+	.finish-btn {
+		margin: 0 60upx;
+		height: 90upx;
+		line-height: 90upx;
+		border-radius: 10upx;
+		text-align: center;
+		background: #feda46;
+	}
+	
+	
 
 	.cropper-config {
 		padding: 20upx 40upx;
 	}
+	.cropper-config button {
+		background: #feda46;
+	}
 
 	.cropper-content {
-		min-height: 750upx;
+		position: fixed;
+		top: 0;
+		left: 0;
 		width: 100%;
+		height: 100%;
+		z-index: 100;
+		background: #fff;
 	}
 
 	.uni-corpper {

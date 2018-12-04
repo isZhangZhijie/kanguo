@@ -4,7 +4,7 @@
 		<view class="user-row wode-row" @tap="goBianji">
 			<view class="avatar">
 				<image :src="userData.head_img" mode="widthFix"></image>
-				欢迎来到看过
+				{{ userData.signature ? userData.signature : '欢迎来到看过~'}}
 			</view>
 			<text class="name">{{ userData.nickname }}</text>
 			<image class="arrow-right" src="../../static/images/my_button_enter@3x.png" mode="widthFix"></image>
@@ -94,7 +94,7 @@
 		methods: {
 			goBianji() {
 				uni.navigateTo({
-					url: './bianji/bianji',
+					url: './bianji/bianji?userData=' + JSON.stringify(this.userData),
 				});
 			},
 			goDongtai() {

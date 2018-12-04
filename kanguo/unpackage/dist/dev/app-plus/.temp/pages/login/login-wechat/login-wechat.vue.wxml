@@ -1,14 +1,14 @@
 <template name="121adcf9">
   <view class="_view data-v-205fb03a container">
-    <image class="_image data-v-205fb03a back" src="/static/images/common_return@3x.png" mode="widthFix" bindtap="handleProxy" data-eventid="{{'BuM-0'}}" data-comkey="{{$k}}"></image>
+    <image class="_image data-v-205fb03a back" src="/static/images/common_return@3x.png" mode="widthFix" bindtap="handleProxy" data-eventid="{{'3m9-0'}}" data-comkey="{{$k}}"></image>
     <view class="_view data-v-205fb03a login-page-top">
       <image class="_image data-v-205fb03a logo" src="../../../static/images/login_touxiang_defaul@3x.png"></image>
-      <view class="_view data-v-205fb03a login-btn" bindtap="handleProxy" data-eventid="{{'hn0-1'}}" data-comkey="{{$k}}">微信登录</view>
+      <view class="_view data-v-205fb03a login-btn" bindtap="handleProxy" data-eventid="{{'ZAf-1'}}" data-comkey="{{$k}}">微信登录</view>
     </view>
     <view class="_view data-v-205fb03a other-login-way" style=" {{('top:' + (positionTop + 'px') + ';')}}">
       <text class="_text data-v-205fb03a">其他方式登录</text>
       <view class="_view data-v-205fb03a other-way-list">
-        <image bindtap="handleProxy" class="_image data-v-205fb03a other-login" src="../../../static/images/login_button_PhoneEnter@3x.png" data-eventid="{{'Kw3-2'}}" data-comkey="{{$k}}"></image>
+        <image bindtap="handleProxy" class="_image data-v-205fb03a other-login" src="../../../static/images/login_button_PhoneEnter@3x.png" data-eventid="{{'cSi-2'}}" data-comkey="{{$k}}"></image>
       </view>
     </view>
   </view>
